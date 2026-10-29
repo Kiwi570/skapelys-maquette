@@ -1093,7 +1093,8 @@ p { margin: 0; max-width: 64ch; }
 
 /* ---------- Pages légales ---------- */
 .page-hero--doc { padding-bottom: clamp(44px, 6vw, 84px); }
-.page-hero--doc .hero-bg { opacity: .32; }
+.page-hero--doc .hero-bg { opacity: .7; }
+.page-hero--doc .hero-bg img { object-position: 50% 78%; }
 .page-hero--doc .wrap { grid-template-columns: minmax(0, 1fr); }
 .page-hero--doc .h1-sub { font-family: var(--f-cote); font-size: var(--t-s); }
 .doc { padding-block: clamp(56px, 8vw, 110px); }

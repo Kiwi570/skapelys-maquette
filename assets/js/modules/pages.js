@@ -1,6 +1,6 @@
 // Effets des pages Refonte, Référencement, Dépannage et pages légales, et menu Services de l'en-tête.
-import { reduced, finePointer, anchorY } from './core.js?v=4';
-import { loopWhileVisible } from './sections.js?v=4';
+import { reduced, finePointer, anchorY } from './core.js?v=5';
+import { loopWhileVisible } from './sections.js?v=5';
 
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];

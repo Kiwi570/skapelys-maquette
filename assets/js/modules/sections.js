@@ -1,6 +1,6 @@
 // Animations propres à chaque section de la maquette Skapelys.
-import { reduced, isMobile, finePointer } from './core.js?v=4';
-import { describeDeadline } from './deadline.js?v=4';
+import { reduced, isMobile, finePointer } from './core.js?v=5';
+import { describeDeadline } from './deadline.js?v=5';
 
 const $ = (s, r = document) => r.querySelector(s);
 

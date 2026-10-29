@@ -1,8 +1,8 @@
 // Point d'entrée de la maquette Skapelys.
-import * as core from './modules/core.js?v=4';
-import * as S from './modules/sections.js?v=4';
-import { mountDeadlines } from './modules/deadline.js?v=4';
-import * as P from './modules/pages.js?v=4';
+import * as core from './modules/core.js?v=5';
+import * as S from './modules/sections.js?v=5';
+import { mountDeadlines } from './modules/deadline.js?v=5';
+import * as P from './modules/pages.js?v=5';
 
 const html = document.documentElement;
 const gsap = window.gsap;
@@ -65,7 +65,7 @@ async function start() {
   if (glHost && !glOk) html.classList.add('no-gl');
   const startGL = () => {
     if (!glOk) return;
-    import('./modules/gl.js?v=4').then((m) => { if (!m.mountField(glHost, gsap)) html.classList.add('no-gl'); }).catch(() => html.classList.add('no-gl'));
+    import('./modules/gl.js?v=5').then((m) => { if (!m.mountField(glHost, gsap)) html.classList.add('no-gl'); }).catch(() => html.classList.add('no-gl'));
   };
   S.heroIntro(gsap, SplitText, core.curtainOut(gsap), () => { html.dataset.introDone = String(Math.round(performance.now())); startGL(); });
 

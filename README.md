@@ -3,7 +3,7 @@
 Maquette statique (HTML, CSS, JavaScript, sans étape de construction) de la refonte du site
 [skapelys.fr](https://skapelys.fr), agence web à Bourg-en-Bresse. Site complet : 8 pages et une page 404,
 aux mêmes adresses que le site actuel (aucune redirection à prévoir pour le référencement).
-Version des feuilles de style et scripts : `?v=4`.
+Version des feuilles de style et scripts : `?v=5`.
 
 ## Pages
 
@@ -57,10 +57,10 @@ Aucune règle Cache-Control dans `vercel.json` : Vercel revérifie chaque fichie
 - Captures mobiles d'Alp Park et KBM Taxi à fournir.
 - Pages Refonte, Référencement et Dépannage : textes repris du site actuel. Le comparateur avant/après, la page de résultats
   Google et le diagnostic animé sont des démonstrations illustratives, signalées comme telles.
-- Images d'ouverture de ces trois pages : les visuels des cartes Services sont réutilisés (images dédiées possibles plus tard).
 
 ## Historique
 
+- v5 : images d'ouverture dédiées (Grok) pour les pages Refonte, Référencement, Dépannage et les deux pages légales.
 - v4 : site complet. Nouvelles pages Refonte (comparateur avant/après), Référencement SEO (page de résultats animée,
   six chantiers), Dépannage (diagnostic animé, étapes, pannes fréquentes), Mentions légales et Politique de
   confidentialité (sommaire qui suit la lecture). Menu Services déroulant, tous les liens internes au site.
