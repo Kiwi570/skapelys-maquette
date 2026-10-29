@@ -1,7 +1,7 @@
 // Point d'entrée de la maquette Skapelys.
-import * as core from './modules/core.js?v=1';
-import * as S from './modules/sections.js?v=1';
-import { mountDeadlines } from './modules/deadline.js?v=1';
+import * as core from './modules/core.js?v=2';
+import * as S from './modules/sections.js?v=2';
+import { mountDeadlines } from './modules/deadline.js?v=2';
 
 const html = document.documentElement;
 const gsap = window.gsap;
@@ -15,6 +15,7 @@ function basics() {
   mountDeadlines();
   S.quiz();
   S.picks();
+  S.ribbons();
 }
 
 function goToHash() {
@@ -46,7 +47,7 @@ async function start() {
     let ok = false;
     try { const c = document.createElement('canvas'); ok = !!(c.getContext('webgl') || c.getContext('experimental-webgl')); } catch (e) { ok = false; }
     if (!ok) return;
-    import('./modules/gl.js?v=1').then((m) => m.mountField(host, gsap)).catch(() => {});
+    import('./modules/gl.js?v=2').then((m) => m.mountField(host, gsap)).catch(() => {});
   };
   S.heroIntro(gsap, SplitText, core.curtainOut(gsap), () => { html.dataset.introDone = String(Math.round(performance.now())); startGL(); });
 
@@ -61,6 +62,7 @@ async function start() {
   S.services(gsap, ScrollTrigger);
   S.glitchCard(gsap, ScrollTrigger);
   S.avis(gsap);
+  S.floatCards(gsap);
   S.maps(gsap);
   S.bento(gsap);
   S.cles(gsap);

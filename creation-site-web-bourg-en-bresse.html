@@ -28,18 +28,19 @@
 <link rel="apple-touch-icon" href="assets/img/marque/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/unbounded.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/site.css?v=1">
+<link rel="stylesheet" href="assets/css/site.css?v=2">
 <script>
 (function(){var d=document.documentElement;d.classList.remove('no-js');d.classList.add('js','intro');var m='';try{m=localStorage.getItem('sk-motion')||''}catch(e){}var r=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;if(m==='reduce'||(r&&m!=='full')){d.classList.add('motion-reduce');d.classList.remove('intro')}else if(m==='full'){d.classList.add('motion-full')}setTimeout(function(){d.classList.remove('intro')},2900)})();
 </script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Skapelys", "description": "Agence web à Bourg-en-Bresse : création de site internet, refonte, référencement et maintenance.", "url": "https://skapelys.fr", "telephone": "+33 7 71 13 99 91", "email": "contact@skapelys.fr", "address": {"@type": "PostalAddress", "streetAddress": "13 allée des Piverts", "postalCode": "01000", "addressLocality": "Bourg-en-Bresse", "addressCountry": "FR"}, "areaServed": ["Bourg-en-Bresse", "Viriat", "Péronnas", "Montagnat", "Saint-Denis-lès-Bourg", "Jasseron", "Saint-Just", "Ain"], "makesOffer": [{"@type": "Offer", "name": "Site One Page", "price": "690", "priceCurrency": "EUR"}, {"@type": "Offer", "name": "Site Sur Mesure", "price": "990", "priceCurrency": "EUR", "description": "À partir de 990 €"}, {"@type": "Offer", "name": "Maintenance", "price": "50", "priceCurrency": "EUR", "description": "Par mois"}]}</script>
 <script defer src="assets/vendor/gsap/gsap.min.js"></script>
 <script defer src="assets/vendor/gsap/ScrollTrigger.min.js"></script>
 <script defer src="assets/vendor/gsap/SplitText.min.js"></script>
-<link rel="modulepreload" href="assets/js/main.js?v=1">
-<link rel="modulepreload" href="assets/js/modules/core.js?v=1">
-<link rel="modulepreload" href="assets/js/modules/sections.js?v=1">
-<link rel="modulepreload" href="assets/js/modules/deadline.js?v=1">
-<script type="module" src="assets/js/main.js?v=1"></script>
+<link rel="modulepreload" href="assets/js/main.js?v=2">
+<link rel="modulepreload" href="assets/js/modules/core.js?v=2">
+<link rel="modulepreload" href="assets/js/modules/sections.js?v=2">
+<link rel="modulepreload" href="assets/js/modules/deadline.js?v=2">
+<script type="module" src="assets/js/main.js?v=2"></script>
 </head>
 <body data-page="creation">
 <a class="skip" href="#contenu">Aller au contenu</a>
@@ -58,6 +59,7 @@
     </nav>
     <button class="burger" type="button" aria-expanded="false" aria-controls="menu-mobile" aria-label="Ouvrir le menu"><span></span><span></span></button>
   </div>
+  <div class="progress" aria-hidden="true"><i class="progress-fill"></i></div>
 </header>
 <div class="mobile-menu" id="menu-mobile" hidden>
   <a href="index.html#services" data-close>Services</a><a href="index.html#realisations" data-close>Réalisations</a><a href="index.html#tarifs" data-close>Tarifs</a><a href="#faq" data-close>FAQ</a>
@@ -66,7 +68,9 @@
   <div class="mm-foot">
     <span class="muted">Téléphone</span>
     <a href="tel:+33771139991" class="cote">07 71 13 99 91</a>
-    <a class="btn" href="#contact" data-close><span class="btn-label">Demander un devis</span></a>
+    <span class="muted">E-mail</span>
+    <a href="mailto:contact@skapelys.fr">contact@skapelys.fr</a>
+    <div class="btn-row"><a class="btn" href="#contact" data-close><span class="btn-label">Demander un devis</span></a><a class="btn btn--line" href="https://wa.me/33771139991" target="_blank" rel="noopener"><span class="btn-label">WhatsApp</span></a></div>
   </div>
 </div>
 <nav class="action-bar" aria-label="Contact rapide">
@@ -84,8 +88,9 @@
   <div class="wrap">
     <div class="hero-copy">
       <nav class="breadcrumb" aria-label="Fil d’Ariane" data-intro><a href="index.html">Accueil</a><span aria-hidden="true">/</span><span aria-current="page">Création de site</span></nav>
-      <div class="proof" data-intro><span class="proof-item"><span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" width="16" height="16"><path fill="currentColor" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" width="16" height="16"><path fill="currentColor" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" width="16" height="16"><path fill="currentColor" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" width="16" height="16"><path fill="currentColor" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" width="16" height="16"><path fill="currentColor" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/></svg></span><span><strong>5,0</strong> sur Google</span></span><span class="proof-sep" aria-hidden="true"></span><span class="proof-item"><strong>10</strong>&nbsp;avis vérifiés</span></div>
-      <h1 id="hero-titre"><span class="h1-main" data-hero-title>Création de site internet à <span class="nw">Bourg-en-Bresse</span></span><span class="h1-sub" data-intro>Un site vitrine livré en 5 jours ouvrés ou un site sur mesure en 2 à 3 semaines : rapide et adapté à tous les écrans (ordinateur, tablette, mobile), avec le référencement SEO de base inclus.</span></h1>
+      <div class="proof" data-intro><span class="proof-item"><span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" width="16" height="16"><path fill="currentColor" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" width="16" height="16"><path fill="currentColor" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" width="16" height="16"><path fill="currentColor" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" width="16" height="16"><path fill="currentColor" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" width="16" height="16"><path fill="currentColor" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/></svg></span><span><strong>5,0</strong> sur Google</span></span><span class="proof-sep" aria-hidden="true"></span><span class="proof-item"><strong>10</strong> avis vérifiés</span></div>
+      <h1 id="hero-titre"><span class="h1-main" data-hero-title>Création de site internet à <span class="nw">Bourg-en-Bresse</span></span></h1>
+      <p class="h1-sub" data-intro>Un site vitrine livré en 5 jours ouvrés ou un site sur mesure en 2 à 3 semaines : rapide et adapté à tous les écrans (ordinateur, tablette, mobile), avec le référencement SEO de base inclus.</p>
       <div class="btn-row" data-intro><a class="btn" href="#tarifs" data-magnetic><span class="btn-label">Voir les tarifs</span></a><a class="btn btn--line" href="#contact" data-magnetic><span class="btn-label">Nous écrire</span></a><span class="phone-inline"><span class="muted">Nous appeler</span><strong>07 71 13 99 91</strong></span></div>
     </div>
     <div class="hero-visual" data-intro-visual><div class="pages-anim" data-pages-anim><svg viewBox="0 0 640 420" role="img" aria-label="Une seule page qui se découpe en plusieurs pages : One Page ou Sur Mesure">
@@ -207,13 +212,14 @@
   <path d="M400 470h30M400 464v12M430 464v12" stroke="#ffd23f" stroke-width="1.5"/>
   <text x="415" y="462" text-anchor="middle">30</text>
 </g>
-<g class="s-chat" opacity="0" font-family="Geist, Arial, sans-serif" font-size="26">
-  <rect x="360" y="230" width="700" height="72" rx="26" fill="#f4f6fa"/>
-  <text x="392" y="275" fill="#0b1838">Bonjour, j’aimerais un site vitrine pour mon activité.</text>
-  <rect x="140" y="326" width="200" height="64" rx="24" fill="#ffd23f"/>
-  <text x="172" y="367" fill="#0b1838" font-weight="600">Bonjour !</text>
-  <rect class="s-typing" x="140" y="410" width="300" height="60" rx="24" fill="#1b3b7a"/>
-  <text class="s-typing" x="172" y="448" fill="#c9d5ee">Skapelys répond…</text>
+<g class="s-chat" opacity="0" font-family="Geist, Arial, sans-serif" font-size="36">
+  <rect x="180" y="150" width="940" height="150" rx="34" fill="#f4f6fa"/>
+  <text x="226" y="214" fill="#0b1838">Bonjour, j’aimerais un site vitrine</text>
+  <text x="226" y="262" fill="#0b1838">pour mon activité.</text>
+  <rect x="80" y="330" width="280" height="88" rx="32" fill="#ffd23f"/>
+  <text x="124" y="388" fill="#0b1838" font-weight="600">Bonjour !</text>
+  <rect class="s-typing" x="80" y="448" width="430" height="84" rx="32" fill="#1b3b7a"/>
+  <text class="s-typing" x="124" y="502" fill="#c9d5ee">Skapelys répond…</text>
 </g>
 </svg></div>
   
@@ -241,8 +247,8 @@
         <p>Le site vitrine essentiel pour présenter votre activité rapidement et à un tarif abordable.</p>
         <ul class="features">
           <li>Une seule page (one page)</li><li>Design soigné et responsive</li><li>Formulaire de contact</li><li>SEO de base inclus</li><li>Livré en 5 jours ouvrés</li>
-          <li class="no"><span>Fonctionnalités avancées <small>réservation, paiement en ligne, espace client, multilingue… : avec le Sur Mesure</small></span><span class="sr-only">non incluses dans cette formule</span></li>
-          <li class="no"><span>Fiche Google Business Profile</span><span class="sr-only">non incluse dans cette formule</span></li>
+          <li class="no"><span><s>Fonctionnalités avancées</s><span class="sr-only"> : non incluses dans cette formule</span> <small>Avec le Sur Mesure</small></span></li>
+          <li class="no"><span><s>Fiche Google Business Profile</s><span class="sr-only"> : non incluse dans cette formule</span> <small>Avec le Sur Mesure</small></span></li>
         </ul>
         <div style="display:grid;gap:18px">
           <div class="price"><b data-count="690">690</b><span class="unit">€</span></div>
@@ -300,6 +306,7 @@
       </div>
     </details>
     <form class="quiz" data-quiz aria-labelledby="quiz-titre" onsubmit="return false">
+      <div class="quiz-bg" aria-hidden="true"><img src="assets/img/grok/accueil-tarifs-matiere-1168.webp" alt="" width="1168" height="784" decoding="async" loading="lazy" srcset="assets/img/grok/accueil-tarifs-matiere-760.webp 760w, assets/img/grok/accueil-tarifs-matiere-1168.webp 1168w" sizes="(max-width: 900px) 100vw, 60vw"></div>
       <div class="quiz-qs">
         <div style="display:grid;gap:10px"><h3 id="quiz-titre">Quelle formule pour vous ?</h3><p class="muted">Trois questions, la réponse s’affiche aussitôt.</p></div>
         <fieldset><legend>Combien de pages vous faut-il ?</legend><div class="chips">
@@ -361,7 +368,7 @@
       </div>
       <div class="devices-scene">
         <div class="laptop" data-laptop>
-          <div class="laptop-screen"><div class="laptop-display"><div class="shot is-active" data-shot="0"><div class="shot-scroll"><img src="assets/img/realisations/alppark-ecran-1600.webp" alt="Page d’accueil du site Alp Park : réservation de parking à l’aéroport de Lyon Saint-Exupéry" width="1600" height="900" decoding="async" loading="lazy" srcset="assets/img/realisations/alppark-ecran-960.webp 960w, assets/img/realisations/alppark-ecran-1600.webp 1600w" sizes="(max-width: 900px) 92vw, 60vw"></div></div><div class="shot" data-shot="1"><div class="shot-scroll"><img src="assets/img/realisations/kbm-taxi-ecran-1600.webp" alt="Page d’accueil du site KBM Taxi, taxi conventionné à Bourg-en-Bresse" width="1600" height="900" decoding="async" loading="lazy" srcset="assets/img/realisations/kbm-taxi-ecran-960.webp 960w, assets/img/realisations/kbm-taxi-ecran-1600.webp 1600w" sizes="(max-width: 900px) 92vw, 60vw"></div></div></div></div>
+          <div class="laptop-screen"><div class="laptop-display"><div class="shot is-active" data-shot="0"><div class="shot-scroll"><img src="assets/img/realisations/alppark-ecran-1600.webp" alt="Page d’accueil du site Alp Park : réservation de parking à l’aéroport de Lyon Saint-Exupéry" width="1600" height="900" decoding="async" loading="lazy" srcset="assets/img/realisations/alppark-ecran-960.webp 960w, assets/img/realisations/alppark-ecran-1600.webp 1600w" sizes="(max-width: 900px) 92vw, 60vw"></div></div><div class="shot" data-shot="1"><div class="shot-scroll"><img src="assets/img/realisations/kbm-taxi-ecran-1600.webp" alt="Page d’accueil du site KBM Taxi, taxi conventionné à Bourg-en-Bresse" width="1600" height="900" decoding="async" loading="lazy" srcset="assets/img/realisations/kbm-taxi-ecran-960.webp 960w, assets/img/realisations/kbm-taxi-ecran-1600.webp 1600w" sizes="(max-width: 900px) 92vw, 60vw"></div></div><a class="laptop-link" href="https://alppark.fr" target="_blank" rel="noopener" data-laptop-link><span class="laptop-cta">Voir alppark.fr</span></a></div></div>
           <div class="laptop-base"></div>
         </div>
       </div>
@@ -382,7 +389,8 @@
       </div>
     </div>
   </div>
-  <div class="ribbons" tabindex="0" aria-label="Avis clients, survolez ou sélectionnez pour mettre en pause">
+  <div class="wrap ribbons-ctrl"><button class="pause-btn" type="button" data-ribbon-toggle aria-pressed="false"><span class="pause-ico" aria-hidden="true"></span><span class="pause-txt">Mettre en pause</span></button></div>
+  <div class="ribbons" tabindex="0" aria-label="Avis clients défilants">
     <div class="ribbon" style="--dur:80s"><figure class="review"><span class="r-stars" aria-label="5 étoiles sur 5">★★★★★</span><blockquote>Un grand merci pour le travail fourni ! Je ne peux que recommander ce prestataire pour son professionnalisme rare.</blockquote><figcaption><strong>Louisa Belabed</strong><span>Publié sur Google</span></figcaption></figure><figure class="review"><span class="r-stars" aria-label="5 étoiles sur 5">★★★★★</span><blockquote>Je recommande vraiment Skapelys ! Il a été très à l’écoute concernant mon projet et mon devis, a pris le temps d’échanger avec moi et de répondre à toutes mes questions. Très professionnel, disponible et à l’écoute. Merci pour votre sérieux et vos conseils 😊</blockquote><figcaption><strong>meyl D</strong><span>Publié sur Google</span></figcaption></figure><figure class="review"><span class="r-stars" aria-label="5 étoiles sur 5">★★★★★</span><blockquote>Je voulais un site rapidement avec l'offre "site essentiel" proposée par Adel Web Solutions, et le résultat a largement dépassé mes attentes. Le site est moderne rapide et de bonne qualité. L'agence a été a l'écoute du début à la fin ! Je recommande sans hésiter</blockquote><figcaption><strong>Baghagha Omar</strong><span>Publié sur Google</span></figcaption></figure><figure class="review"><span class="r-stars" aria-label="5 étoiles sur 5">★★★★★</span><blockquote>J’ai réalisé mon site internet et je ne suis pas déçu du résultat, à l’écoute des attentes et surtout très réactif. Je recommande !</blockquote><figcaption><strong>Adnane IJJOU</strong><span>Publié sur Google</span></figcaption></figure><figure class="review dup" aria-hidden="true"><span class="r-stars" aria-label="5 étoiles sur 5">★★★★★</span><blockquote>Un grand merci pour le travail fourni ! Je ne peux que recommander ce prestataire pour son professionnalisme rare.</blockquote><figcaption><strong>Louisa Belabed</strong><span>Publié sur Google</span></figcaption></figure><figure class="review dup" aria-hidden="true"><span class="r-stars" aria-label="5 étoiles sur 5">★★★★★</span><blockquote>Je recommande vraiment Skapelys ! Il a été très à l’écoute concernant mon projet et mon devis, a pris le temps d’échanger avec moi et de répondre à toutes mes questions. Très professionnel, disponible et à l’écoute. Merci pour votre sérieux et vos conseils 😊</blockquote><figcaption><strong>meyl D</strong><span>Publié sur Google</span></figcaption></figure><figure class="review dup" aria-hidden="true"><span class="r-stars" aria-label="5 étoiles sur 5">★★★★★</span><blockquote>Je voulais un site rapidement avec l'offre "site essentiel" proposée par Adel Web Solutions, et le résultat a largement dépassé mes attentes. Le site est moderne rapide et de bonne qualité. L'agence a été a l'écoute du début à la fin ! Je recommande sans hésiter</blockquote><figcaption><strong>Baghagha Omar</strong><span>Publié sur Google</span></figcaption></figure><figure class="review dup" aria-hidden="true"><span class="r-stars" aria-label="5 étoiles sur 5">★★★★★</span><blockquote>J’ai réalisé mon site internet et je ne suis pas déçu du résultat, à l’écoute des attentes et surtout très réactif. Je recommande !</blockquote><figcaption><strong>Adnane IJJOU</strong><span>Publié sur Google</span></figcaption></figure></div>
     <div class="ribbon ribbon--rev" style="--dur:70s"><figure class="review"><span class="r-stars" aria-label="5 étoiles sur 5">★★★★★</span><blockquote>Je recommande vivement ce prestataire pour la création de sites internet. Un excellent choix pour toute personne souhaitant développer sa présence en ligne.</blockquote><figcaption><strong>CHIBI Ilyas</strong><span>Publié sur Google</span></figcaption></figure><figure class="review"><span class="r-stars" aria-label="5 étoiles sur 5">★★★★★</span><blockquote>Service au top !</blockquote><figcaption><strong>Mehdy Boutayeb</strong><span>Publié sur Google</span></figcaption></figure><figure class="review"><span class="r-stars" aria-label="5 étoiles sur 5">★★★★★</span><blockquote>Très bon rendu !</blockquote><figcaption><strong>Steve Lacas</strong><span>Publié sur Google</span></figcaption></figure><figure class="review"><span class="r-stars" aria-label="5 étoiles sur 5">★★★★★</span><blockquote>Super expérience, service de qualité !</blockquote><figcaption><strong>Abdelaziz Settouti</strong><span>Publié sur Google</span></figcaption></figure><figure class="review dup" aria-hidden="true"><span class="r-stars" aria-label="5 étoiles sur 5">★★★★★</span><blockquote>Je recommande vivement ce prestataire pour la création de sites internet. Un excellent choix pour toute personne souhaitant développer sa présence en ligne.</blockquote><figcaption><strong>CHIBI Ilyas</strong><span>Publié sur Google</span></figcaption></figure><figure class="review dup" aria-hidden="true"><span class="r-stars" aria-label="5 étoiles sur 5">★★★★★</span><blockquote>Service au top !</blockquote><figcaption><strong>Mehdy Boutayeb</strong><span>Publié sur Google</span></figcaption></figure><figure class="review dup" aria-hidden="true"><span class="r-stars" aria-label="5 étoiles sur 5">★★★★★</span><blockquote>Très bon rendu !</blockquote><figcaption><strong>Steve Lacas</strong><span>Publié sur Google</span></figcaption></figure><figure class="review dup" aria-hidden="true"><span class="r-stars" aria-label="5 étoiles sur 5">★★★★★</span><blockquote>Super expérience, service de qualité !</blockquote><figcaption><strong>Abdelaziz Settouti</strong><span>Publié sur Google</span></figcaption></figure></div>
   </div>
@@ -395,7 +403,9 @@
       </div>
       <div class="faq-mascot" data-float><img src="assets/img/mascotte/mascotte-pouce-300.webp" alt="La mascotte caméléon de Skapelys fait signe" width="303" height="427" decoding="async" loading="lazy"></div>
     </div>
-    <div class="faq-list"><details class="qa"><summary><span>Combien coûte la création d’un site internet à Bourg-en-Bresse ?</span><span class="pm" aria-hidden="true"></span></summary><div class="answer"><p>690 € pour un site vitrine une page, à partir de 990 € pour un site sur mesure. Le devis est gratuit et le prix est fixé avant le début du projet : pas de surprise en cours de route. La maintenance est en option, à 50 € par mois.</p></div></details><details class="qa"><summary><span>Combien de temps faut-il pour créer mon site ?</span><span class="pm" aria-hidden="true"></span></summary><div class="answer"><p>Pour un site vitrine une page, comptez 5 jours ouvrés après réception de vos textes et de vos photos. Pour un site sur mesure, comptez en général 2 à 3 semaines selon le nombre de pages et les fonctions : nous vous donnons une date précise dès le premier échange.</p></div></details><details class="qa"><summary><span>Site vitrine ou site sur mesure : comment choisir ?</span><span class="pm" aria-hidden="true"></span></summary><div class="answer"><p>Le site vitrine une page suffit pour présenter votre activité et être contacté. Le site sur mesure convient si vous avez plusieurs services à détailler, beaucoup de contenu, ou besoin de fonctions comme la réservation ou le paiement en ligne. En cas de doute, nous vous conseillons lors du premier échange.</p></div></details><details class="qa"><summary><span>Mon site sera-t-il visible sur Google ?</span><span class="pm" aria-hidden="true"></span></summary><div class="answer"><p>Le référencement de base est inclus dans toutes les formules : structure optimisée, temps de chargement et balises travaillées dès la création. La formule Sur Mesure ajoute la création de votre fiche Google Business Profile. Pour aller plus loin, voyez notre accompagnement en <a href="https://skapelys.fr/referencement-seo-bourg-en-bresse/">référencement SEO</a>.</p></div></details><details class="qa"><summary><span>Suis-je propriétaire de mon site et de mon nom de domaine ?</span><span class="pm" aria-hidden="true"></span></summary><div class="answer"><p>Oui. Le site, le nom de domaine et l’hébergement sont à votre nom. À la livraison, vous recevez tous les accès et vous restez libre de faire évoluer le site, avec nous ou sans nous.</p></div></details><details class="qa"><summary><span>Pourrai-je modifier mon site moi-même ?</span><span class="pm" aria-hidden="true"></span></summary><div class="answer"><p>Oui. Le site est livré sur WordPress, avec un espace d’administration simple pour changer vos textes, vos photos ou vos horaires.</p></div></details><details class="qa"><summary><span>La maintenance est-elle obligatoire ?</span><span class="pm" aria-hidden="true"></span></summary><div class="answer"><p>Non. Elle est proposée en option, à 50 € par mois : mises à jour, sauvegardes et intervention en cas de bug. Vous pouvez aussi gérer votre site vous-même. Le détail est sur la page <a href="maintenance-site-wordpress-bourg-en-bresse.html">maintenance de site</a>.</p></div></details><details class="qa"><summary><span>Travaillez-vous en dehors de Bourg-en-Bresse ?</span><span class="pm" aria-hidden="true"></span></summary><div class="answer"><p>Oui. Nous intervenons à Bourg-en-Bresse et dans tout l’Ain, à Viriat, Péronnas, Montagnat, Saint-Denis-lès-Bourg, Jasseron ou Saint-Just, en rendez-vous comme à distance, et avec des clients partout en France.</p></div></details></div>
+    <div class="faq-list"><details class="qa"><summary><span>Combien coûte la création d’un site internet à Bourg-en-Bresse ?</span><span class="pm" aria-hidden="true"></span></summary><div class="answer"><p>690 € pour un site vitrine une page, à partir de 990 € pour un site sur mesure. Le devis est gratuit et le prix est fixé avant le début du projet : pas de surprise en cours de route. La maintenance est en option, à 50 € par mois.</p></div></details><details class="qa"><summary><span>Combien de temps faut-il pour créer mon site ?</span><span class="pm" aria-hidden="true"></span></summary><div class="answer"><p>Pour un site vitrine une page, comptez 5 jours ouvrés après réception de vos textes et de vos photos. Pour un site sur mesure, comptez en général 2 à 3 semaines selon le nombre de pages et les fonctions : nous vous donnons une date précise dès le premier échange.</p></div></details><details class="qa"><summary><span>Site vitrine ou site sur mesure : comment choisir ?</span><span class="pm" aria-hidden="true"></span></summary><div class="answer"><p>Le site vitrine une page suffit pour présenter votre activité et être contacté. Le site sur mesure convient si vous avez plusieurs services à détailler, beaucoup de contenu, ou besoin de fonctions comme la réservation ou le paiement en ligne. En cas de doute, nous vous conseillons lors du premier échange.</p></div></details><details class="qa"><summary><span>Mon site sera-t-il visible sur Google ?</span><span class="pm" aria-hidden="true"></span></summary><div class="answer"><p>Le référencement de base est inclus dans toutes les formules : structure optimisée, temps de chargement et balises travaillées dès la création. La formule Sur Mesure ajoute la création de votre fiche Google Business Profile. Pour aller plus loin, voyez notre accompagnement en <a href="https://skapelys.fr/referencement-seo-bourg-en-bresse/">référencement SEO</a>.</p></div></details><details class="qa"><summary><span>Suis-je propriétaire de mon site et de mon nom de domaine ?</span><span class="pm" aria-hidden="true"></span></summary><div class="answer"><p>Oui. Le site, le nom de domaine et l’hébergement sont à votre nom. À la livraison, vous recevez tous les accès et vous restez libre de faire évoluer le site, avec nous ou sans nous.</p></div></details><details class="qa"><summary><span>Pourrai-je modifier mon site moi-même ?</span><span class="pm" aria-hidden="true"></span></summary><div class="answer"><p>Oui. Le site est livré sur WordPress, avec un espace d’administration simple pour changer vos textes, vos photos ou vos horaires.</p></div></details><details class="qa"><summary><span>La maintenance est-elle obligatoire ?</span><span class="pm" aria-hidden="true"></span></summary><div class="answer"><p>Non. Elle est proposée en option, à 50 € par mois : mises à jour, sauvegardes et intervention en cas de bug. Vous pouvez aussi gérer votre site vous-même. Le détail est sur la page <a href="maintenance-site-wordpress-bourg-en-bresse.html">maintenance de site</a>.</p></div></details><details class="qa"><summary><span>Travaillez-vous en dehors de Bourg-en-Bresse ?</span><span class="pm" aria-hidden="true"></span></summary><div class="answer"><p>Oui. Nous intervenons à Bourg-en-Bresse et dans tout l’Ain, à Viriat, Péronnas, Montagnat, Saint-Denis-lès-Bourg, Jasseron ou Saint-Just, en rendez-vous comme à distance, et avec des clients partout en France.</p></div></details>
+      <div class="faq-cta"><p><strong>Une autre question ?</strong> Posez-la directement, réponse sous 24 h ouvrées.</p><div class="btn-row"><a class="btn btn--ink" href="#contact"><span class="btn-label">Poser ma question</span></a><span class="phone-inline"><span class="muted">ou appelez le</span><strong>07 71 13 99 91</strong></span></div></div>
+    </div>
   </div>
 </section><section class="band band--plan contact" id="contact" aria-labelledby="contact-titre">
   <div class="contact-bg"><img src="assets/img/grok/accueil-contact-1168.webp" alt="" width="1168" height="784" decoding="async" loading="lazy" srcset="assets/img/grok/accueil-contact-760.webp 760w, assets/img/grok/accueil-contact-1168.webp 1168w" sizes="100vw"></div>
@@ -404,13 +414,13 @@
       <div class="sec-head" style="margin-bottom:0">
         <span class="eyebrow">Contact</span>
         <h2 id="contact-titre" data-split>Votre devis de site internet, gratuit.</h2>
-        <p class="lead">Que vous ayez un projet précis ou simplement une idée, nous vous répondons sous 24h.</p>
+        <p class="lead">Que vous ayez un projet précis ou simplement une idée, nous vous répondons sous 24 h.</p>
       </div>
       <ul class="coords">
         <li><span class="k">Téléphone</span><span class="v"><span class="sel">07 71 13 99 91</span><button class="copy-btn" type="button" data-copy="07 71 13 99 91">Copier</button></span></li>
         <li><span class="k">E-mail</span><span class="v"><span class="sel">contact@skapelys.fr</span><button class="copy-btn" type="button" data-copy="contact@skapelys.fr">Copier</button></span></li>
         <li><span class="k">Localisation</span><span class="v">Bourg-en-Bresse et l’Ain (01)</span></li>
-        <li><span class="k">Réponse garantie</span><span class="v">Sous 24h ouvrées</span></li>
+        <li><span class="k">Réponse garantie</span><span class="v">Sous 24 h ouvrées</span></li>
       </ul>
       <div class="deadline" data-deadline>
         <span class="deadline-label">Écrivez maintenant : réponse au plus tard</span>
@@ -428,15 +438,21 @@
       </div>
     </div>
     <div class="form-card">
+      <div class="form-mascot" aria-hidden="true"><img src="assets/img/mascotte/mascotte-coucou-240.webp" alt="" width="240" height="277" decoding="async" loading="lazy"></div>
       <form class="devis" data-devis novalidate aria-label="Demande de devis">
         <div class="form-progress" aria-hidden="true"><span class="on">Votre besoin</span><span>Votre projet</span><span>Vos coordonnées</span></div>
         <fieldset class="form-step" data-step="0">
           <legend>De quoi avez-vous besoin ?</legend>
           <div class="chips"><label class="chip"><input type="radio" name="besoin" id="besoin-creation" value="Création de site" checked><span>Création de site</span></label><label class="chip"><input type="radio" name="besoin" id="besoin-refonte" value="Refonte de site"><span>Refonte de site</span></label><label class="chip"><input type="radio" name="besoin" id="besoin-seo" value="Référencement"><span>Référencement</span></label><label class="chip"><input type="radio" name="besoin" id="besoin-maintenance" value="Maintenance"><span>Maintenance</span></label><label class="chip"><input type="radio" name="besoin" id="besoin-depannage" value="Dépannage"><span>Dépannage</span></label><label class="chip"><input type="radio" name="besoin" id="besoin-idee" value="Je ne sais pas encore"><span>Je ne sais pas encore</span></label></div>
+          <fieldset class="field field-set"><legend class="field-legend">Quand souhaitez-vous démarrer ?</legend><div class="chips">
+            <label class="chip"><input type="radio" name="demarrage" id="demarrage-vite" value="Dès que possible" checked><span>Dès que possible</span></label>
+            <label class="chip"><input type="radio" name="demarrage" id="demarrage-mois" value="Dans les prochains mois"><span>Dans les prochains mois</span></label>
+            <label class="chip"><input type="radio" name="demarrage" id="demarrage-info" value="Je me renseigne"><span>Je me renseigne</span></label>
+          </div></fieldset>
         </fieldset>
         <fieldset class="form-step" data-step="1" hidden>
           <legend>Parlez-nous de votre projet</legend>
-          <div class="field"><span style="font-weight:500;font-size:var(--t-s)">Formule envisagée</span><div class="chips"><label class="chip"><input type="radio" name="formule" id="formule-one-page" value="Site One Page, 690 €"><span>Site One Page, 690 €</span></label><label class="chip"><input type="radio" name="formule" id="formule-sur-mesure" value="Site Sur Mesure, dès 990 €"><span>Site Sur Mesure, dès 990 €</span></label><label class="chip"><input type="radio" name="formule" id="formule-maintenance" value="Maintenance, 50 € par mois"><span>Maintenance, 50 € par mois</span></label><label class="chip"><input type="radio" name="formule" id="formule-a-definir" value="À définir ensemble" checked><span>À définir ensemble</span></label></div></div>
+          <fieldset class="field field-set"><legend class="field-legend">Formule envisagée</legend><div class="chips"><label class="chip"><input type="radio" name="formule" id="formule-one-page" value="Site One Page, 690 €"><span>Site One Page, 690 €</span></label><label class="chip"><input type="radio" name="formule" id="formule-sur-mesure" value="Site Sur Mesure, dès 990 €"><span>Site Sur Mesure, dès 990 €</span></label><label class="chip"><input type="radio" name="formule" id="formule-maintenance" value="Maintenance, 50 € par mois"><span>Maintenance, 50 € par mois</span></label><label class="chip"><input type="radio" name="formule" id="formule-a-definir" value="À définir ensemble" checked><span>À définir ensemble</span></label></div></fieldset>
           <div class="field"><label for="f-site">Adresse de votre site actuel <span class="opt">(facultatif)</span></label><input id="f-site" name="site" type="url" inputmode="url" placeholder="https://" autocomplete="url"></div>
           <div class="field" data-req><label for="f-projet">Votre projet *</label><textarea id="f-projet" name="projet" required placeholder="Votre activité, ce que vous attendez du site, une date souhaitée…"></textarea><span class="err" aria-live="polite"></span></div>
         </fieldset>
@@ -473,7 +489,7 @@
         <p style="margin-top:14px">Agence web à Bourg-en-Bresse et dans l’Ain. Création, refonte, référencement et maintenance de sites internet.</p>
       </div>
       <div>
-        <h4>Services</h4>
+        <h2 class="footer-h">Services</h2>
         <ul>
           <li><a href="creation-site-web-bourg-en-bresse.html">Création de site</a></li>
           <li><a href="https://skapelys.fr/refonte-site-internet-bourg-en-bresse/" class="ext">Refonte de site</a></li>
@@ -483,7 +499,7 @@
         </ul>
       </div>
       <div>
-        <h4>Contact</h4>
+        <h2 class="footer-h">Contact</h2>
         <ul>
           <li><a href="tel:+33771139991" class="cote">07 71 13 99 91</a></li>
           <li><a href="mailto:contact@skapelys.fr">contact@skapelys.fr</a></li>
@@ -492,7 +508,7 @@
         </ul>
       </div>
       <div>
-        <h4>Informations</h4>
+        <h2 class="footer-h">Informations</h2>
         <ul>
           <li><a href="https://skapelys.fr/mentions-legales/" class="ext">Mentions légales</a></li>
           <li><a href="https://skapelys.fr/politique-de-confidentialite/" class="ext">Politique de confidentialité</a></li>

@@ -2,7 +2,7 @@
 
 Maquette statique (HTML, CSS, JavaScript, sans étape de construction) de la refonte du site
 [skapelys.fr](https://skapelys.fr), agence web à Bourg-en-Bresse.
-Version des feuilles de style et scripts : `?v=1`.
+Version des feuilles de style et scripts : `?v=2`.
 
 ## Pages
 
@@ -47,6 +47,15 @@ Aucune règle Cache-Control dans `vercel.json` : Vercel revérifie chaque fichie
 - Délai « sous 24 h ouvrées » : calculé comme le jour ouvré suivant, hors week-ends et jours fériés.
 - L'adresse `/creation-site-web-bourg-en-bresse` sans « / » final sert une ancienne version (E-commerce dès 1 490 €, livraison 48-72 h).
 - Captures mobiles d'Alp Park et KBM Taxi à fournir.
+
+## Historique
+
+- v2 : audit complet. Contrastes et cibles tactiles corrigés, titres hiérarchisés (un seul H1 par page),
+  photos des services dégagées, carte en double remplacée par la photo du bocage, trousseau visible,
+  bouton pause sur les avis, écran des réalisations cliquable, barre d'avancement et indicateur de défilement,
+  appel à l'action sous la FAQ, formulaire enrichi, boucles d'animation arrêtées hors écran,
+  fiche entreprise schema.org (données réelles uniquement).
+- v1 : première maquette (accueil, création, maintenance, 404).
 
 ## Images
 

@@ -1,8 +1,15 @@
 // Animations propres à chaque section de la maquette Skapelys.
-import { reduced, isMobile, finePointer } from './core.js?v=1';
-import { describeDeadline } from './deadline.js?v=1';
+import { reduced, isMobile, finePointer } from './core.js?v=2';
+import { describeDeadline } from './deadline.js?v=2';
 
 const $ = (s, r = document) => r.querySelector(s);
+
+// Une boucle ne tourne que lorsque son élément est à l'écran
+export function loopWhileVisible(gsap, el, anim) {
+  const io = new IntersectionObserver((en) => { en[0].isIntersecting ? anim.play() : anim.pause(); }, { rootMargin: '80px' });
+  io.observe(el);
+  return anim;
+}
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 
 // ---------------------------------------------------------------- fenêtre « chantier »
@@ -134,9 +141,10 @@ export function chantier(gsap, ScrollTrigger) {
   }
   blank(gsap, parts);
   gsap.set(parts.chat, { opacity: 1 });
-  gsap.set(parts.chatParts.slice(2), { opacity: 0, y: 14 });
+  const later = parts.chatParts.slice(3);
+  gsap.set(later, { opacity: 0, y: 14 });
   const tl = gsap.timeline({ defaults: { ease: 'none' } });
-  tl.to(parts.chatParts.slice(2), { opacity: 1, y: 0, duration: 0.12, stagger: 0.12, ease: 'power2.out' }, 0.1)
+  tl.to(later, { opacity: 1, y: 0, duration: 0.12, stagger: 0.1, ease: 'power2.out' }, 0.1)
     .to(parts.typing, { opacity: 0.5, duration: 0.1, yoyo: true, repeat: 3 }, 0.55)
     .to(parts.chat, { opacity: 0, duration: 0.15 }, 0.95)
     .to(parts.grid, { opacity: 1, duration: 0.2 }, 1.0)
@@ -252,7 +260,16 @@ export function realisations(gsap, ScrollTrigger) {
     const items = $$('.real-item', sec);
     const shots = $$('.shot', sec);
     const laptop = $('[data-laptop]', sec);
-    const set = (i) => { items.forEach((x, k) => x.classList.toggle('is-active', k === i)); shots.forEach((x, k) => x.classList.toggle('is-active', k === i)); };
+    const link = $('[data-laptop-link]', sec);
+    let cur = -1;
+    const set = (i) => {
+      if (i === cur) return; cur = i;
+      items.forEach((x, k) => x.classList.toggle('is-active', k === i));
+      shots.forEach((x, k) => x.classList.toggle('is-active', k === i));
+      const a = items[i] && $('a', items[i]);
+      if (link && a) { link.href = a.href; const dom = $('.domain', items[i]).textContent; $('.laptop-cta', link).textContent = 'Voir ' + dom; link.setAttribute('aria-label', 'Voir le site ' + dom + ' (nouvel onglet)'); }
+    };
+    set(0);
     if (reduced()) return;
     if (isMobile() && innerHeight < 720) {
       sec.classList.add('no-pin');
@@ -270,6 +287,33 @@ export function realisations(gsap, ScrollTrigger) {
       onUpdate: (st) => set(st.progress < 0.5 ? 0 : 1),
     });
     items.forEach((it, k) => it.addEventListener('mouseenter', () => set(k)));
+  });
+}
+
+// ---------------------------------------------------------------- avis : pause et arrêt hors écran
+export function ribbons() {
+  $$('.avis').forEach((sec) => {
+    const box = $('.ribbons', sec), btn = $('[data-ribbon-toggle]', sec);
+    if (!box) return;
+    const io = new IntersectionObserver((en) => box.classList.toggle('is-off', !en[0].isIntersecting));
+    io.observe(box);
+    if (!btn) return;
+    if (reduced()) { btn.hidden = true; return; }
+    btn.addEventListener('click', () => {
+      const p = !box.classList.contains('is-paused');
+      box.classList.toggle('is-paused', p);
+      btn.setAttribute('aria-pressed', String(p));
+      $('.pause-txt', btn).textContent = p ? 'Reprendre le défilement' : 'Mettre en pause';
+    });
+  });
+}
+
+// ---------------------------------------------------------------- zone : cartes flottantes
+export function floatCards(gsap) {
+  if (reduced()) return;
+  $$('[data-float-card]').forEach((c, i) => {
+    gsap.from(c, { y: 30, opacity: 0, duration: 0.8, ease: 'back.out(1.6)', delay: i * 0.15, scrollTrigger: { trigger: c, start: 'top 90%', once: true } });
+    loopWhileVisible(gsap, c, gsap.to(c, { y: i % 2 ? 8 : -8, duration: 2.8 + i * 0.4, ease: 'sine.inOut', yoyo: true, repeat: -1, paused: true }));
   });
 }
 
@@ -295,7 +339,7 @@ export function maps(gsap) {
     tl.to(lines, { strokeDashoffset: 0, duration: 0.7, ease: 'power2.inOut', stagger: 0.14 });
     towns.forEach((t, i) => tl.call(() => t.classList.add('on'), null, 0.55 + i * 0.14));
     tl.from(towns, { scale: 0, transformOrigin: '50% 50%', duration: 0.4, ease: 'back.out(3)', stagger: 0.14 }, 0.45);
-    if (ring) gsap.to(ring, { attr: { r: 30 }, opacity: 0, duration: 1.8, repeat: -1, ease: 'power1.out' });
+    if (ring) loopWhileVisible(gsap, m, gsap.to(ring, { attr: { r: 30 }, opacity: 0, duration: 1.8, repeat: -1, ease: 'power1.out', paused: true }));
   });
 }
 
@@ -448,7 +492,8 @@ export function pagesAnim(gsap) {
   if (!el || reduced()) return;
   const one = $('.pa-one', el), multi = $('.pa-multi', el), blks = $$('.pa-blk', el), sheets = $$('.pa-sheet', el);
   const l1 = $$('.pa-lab-one', el), l2 = $$('.pa-lab-multi', el);
-  const tl = gsap.timeline({ repeat: -1, repeatDelay: 0.6, delay: 1.2 });
+  const tl = gsap.timeline({ repeat: -1, repeatDelay: 0.6, delay: 1.2, paused: true });
+  loopWhileVisible(gsap, el, tl);
   tl.from(blks, { y: -30, opacity: 0, duration: 0.45, stagger: 0.1, ease: 'back.out(1.7)' })
     .to({}, { duration: 1.2 })
     .to(one, { scale: 0.85, opacity: 0, duration: 0.45, transformOrigin: '50% 50%', ease: 'power2.in' })
@@ -471,11 +516,12 @@ export function dashboard(gsap) {
   if (!d || reduced()) return;
   const bars = $$('.upd .bar i', d), st = $$('.upd .st', d), path = $('.uptime path', d);
   gsap.set(bars, { scaleX: 1 });
-  const tl = gsap.timeline({ repeat: -1, repeatDelay: 2.4, delay: 1.4 });
+  const tl = gsap.timeline({ repeat: -1, repeatDelay: 2.4, delay: 1.4, paused: true });
+  loopWhileVisible(gsap, d, tl);
   tl.set(st, { opacity: 0 })
     .fromTo(bars, { scaleX: 0 }, { scaleX: 1, duration: 0.9, stagger: 0.45, ease: 'power1.inOut' })
     .to(st, { opacity: 1, duration: 0.3, stagger: 0.45 }, 0.7);
-  if (path) gsap.fromTo(path, { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 2.6, ease: 'none', repeat: -1, repeatDelay: 0.6 });
+  if (path) loopWhileVisible(gsap, d, gsap.fromTo(path, { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 2.6, ease: 'none', repeat: -1, repeatDelay: 0.6, paused: true }));
 }
 
 export function checklists(gsap) {

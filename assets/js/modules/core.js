@@ -73,8 +73,10 @@ export function header() {
   const h = document.querySelector('.site-header');
   if (!h) return;
   let last = scrollY;
+  const bar = h.querySelector('.progress-fill');
   const onScroll = () => {
     const y = scrollY;
+    if (bar) { const max = document.documentElement.scrollHeight - innerHeight; bar.style.transform = `scaleX(${max > 0 ? Math.min(1, y / max) : 0})`; }
     h.classList.toggle('is-solid', y > 30);
     const menuOpen = document.body.classList.contains('menu-open');
     h.classList.toggle('is-hidden', !menuOpen && y > innerHeight * 0.9 && y > last + 4);
@@ -218,7 +220,8 @@ export function reveals(gsap, ScrollTrigger, SplitText) {
     gsap.fromTo(t, { yPercent: -7 }, { yPercent: 7, ease: 'none', scrollTrigger: { trigger: m, start: 'top bottom', end: 'bottom top', scrub: true } });
   });
   document.querySelectorAll('[data-float]').forEach((m) => {
-    gsap.to(m, { y: -12, rotation: -2, duration: 2.6, ease: 'sine.inOut', yoyo: true, repeat: -1 });
+    const tw = gsap.to(m, { y: -12, rotation: -2, duration: 2.6, ease: 'sine.inOut', yoyo: true, repeat: -1, paused: true });
+    new IntersectionObserver((en) => { en[0].isIntersecting ? tw.play() : tw.pause(); }).observe(m);
   });
 }
 
