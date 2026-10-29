@@ -2,7 +2,7 @@
 
 Maquette statique (HTML, CSS, JavaScript, sans étape de construction) de la refonte du site
 [skapelys.fr](https://skapelys.fr), agence web à Bourg-en-Bresse.
-Version des feuilles de style et scripts : `?v=2`.
+Version des feuilles de style et scripts : `?v=3`.
 
 ## Pages
 
@@ -50,6 +50,11 @@ Aucune règle Cache-Control dans `vercel.json` : Vercel revérifie chaque fichie
 
 ## Historique
 
+- v3 : effets et transitions repris image par image. Rideau d'ouverture et de sortie visible (avec logo),
+  liens internes sans .html (plus de redirection), prix sans saut de chiffre, accordéons sans à-coup,
+  curseur recalé pendant le défilement, titres d'ouverture rendus au texte normal, parallaxe sans bord visible,
+  menu téléphone animé avec focus piégé, hauteur du devis animée, carte et étoiles compatibles Safari,
+  grille WebGL sans doublon à l'ouverture, en-tête sans chevauchement de 901 à 1180 px, formulaire collant réparé.
 - v2 : audit complet. Contrastes et cibles tactiles corrigés, titres hiérarchisés (un seul H1 par page),
   photos des services dégagées, carte en double remplacée par la photo du bocage, trousseau visible,
   bouton pause sur les avis, écran des réalisations cliquable, barre d'avancement et indicateur de défilement,

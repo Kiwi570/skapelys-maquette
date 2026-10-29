@@ -1,6 +1,6 @@
 // Animations propres à chaque section de la maquette Skapelys.
-import { reduced, isMobile, finePointer } from './core.js?v=2';
-import { describeDeadline } from './deadline.js?v=2';
+import { reduced, isMobile, finePointer } from './core.js?v=3';
+import { describeDeadline } from './deadline.js?v=3';
 
 const $ = (s, r = document) => r.querySelector(s);
 
@@ -98,7 +98,7 @@ export function heroIntro(gsap, SplitText, curtainTl, onDone) {
 
   const tl = gsap.timeline({ onComplete: () => onDone && onDone() });
   tl.add(curtainTl, 0);
-  if (split) tl.to(split.lines, { yPercent: 0, duration: 0.85, ease: 'power4.out', stagger: 0.08, onComplete: () => { html.dataset.titleDone = String(Math.round(performance.now())); } }, 0.22);
+  if (split) tl.to(split.lines, { yPercent: 0, duration: 0.85, ease: 'power4.out', stagger: 0.08, onComplete: () => { html.dataset.titleDone = String(Math.round(performance.now())); split.revert(); } }, 0.22);
   tl.to(intro, { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out', stagger: 0.07 }, 0.38);
   tl.to(visual, { y: 0, opacity: 1, rotationX: 0, duration: 0.75, ease: 'power3.out' }, 0.3);
   if (parts) {
@@ -108,6 +108,8 @@ export function heroIntro(gsap, SplitText, curtainTl, onDone) {
     if (nf) tl.call(() => setStatus(parts, 'Introuvable', false));
   }
   if (mascot) tl.to(mascot, { y: 0, rotation: 0, opacity: 1, duration: 0.7, ease: 'back.out(2)' }, '>-0.35');
+  // la perspective d'entrée est retirée une fois posée (pas de calque 3D permanent)
+  tl.set(visual, { clearProps: 'transform,transformPerspective,opacity' });
   return tl;
 }
 
@@ -190,7 +192,7 @@ export function metiers(gsap, ScrollTrigger) {
     const ms = $('.mini-site', c);
     const im = $('.media img, .media .ph', c);
     if (ms) gsap.from(ms, { yPercent: -40, opacity: 0, rotation: -5, duration: 0.8, ease: 'back.out(1.7)', scrollTrigger: { trigger: c, containerAnimation: tween, start: 'left 85%', toggleActions: 'play none none reverse' } });
-    if (im) gsap.fromTo(im, { xPercent: -6, scale: 1.12 }, { xPercent: 6, scale: 1.12, ease: 'none', scrollTrigger: { trigger: c, containerAnimation: tween, start: 'left right', end: 'right left', scrub: true } });
+    if (im) gsap.fromTo(im, { xPercent: -4.5, scale: 1.12 }, { xPercent: 4.5, scale: 1.12, ease: 'none', scrollTrigger: { trigger: c, containerAnimation: tween, start: 'left right', end: 'right left', scrub: true } });
   });
 }
 
@@ -325,20 +327,21 @@ export function avis(gsap) {
     const fills = $$('.score-stars .fill', sc);
     const tl = gsap.timeline({ scrollTrigger: { trigger: sc, start: 'top 85%', once: true } });
     tl.from(digits, { yPercent: 100, duration: 0.9, ease: 'power4.out', stagger: 0.12 })
-      .fromTo(fills, { clipPath: 'inset(0 100% 0 0)' }, { clipPath: 'inset(0 0% 0 0)', duration: 0.35, stagger: 0.12, ease: 'power1.out' }, 0.3);
+      .fromTo(fills, { scale: 0, transformOrigin: '50% 50%' }, { scale: 1, duration: 0.45, stagger: 0.1, ease: 'back.out(2.6)' }, 0.3);
   });
 }
 
 // ---------------------------------------------------------------- cartes : Bourg-en-Bresse et ses communes
 export function maps(gsap) {
   $$('[data-map]').forEach((m) => {
-    const lines = $$('.link-line', m), towns = $$('.town', m), ring = $('.hub-ring', m);
+    const lines = $$('.link-line', m), towns = $$('.town-g', m), dots = $$('.town-dot', m), ring = $('.hub-ring', m);
     if (reduced()) { towns.forEach((t) => t.classList.add('on')); return; }
     gsap.set(lines, { strokeDasharray: 1, strokeDashoffset: 1 });
     const tl = gsap.timeline({ scrollTrigger: { trigger: m, start: 'top 80%', once: true } });
     tl.to(lines, { strokeDashoffset: 0, duration: 0.7, ease: 'power2.inOut', stagger: 0.14 });
     towns.forEach((t, i) => tl.call(() => t.classList.add('on'), null, 0.55 + i * 0.14));
-    tl.from(towns, { scale: 0, transformOrigin: '50% 50%', duration: 0.4, ease: 'back.out(3)', stagger: 0.14 }, 0.45);
+    tl.fromTo(dots, { scale: 0, transformOrigin: '50% 50%' }, { scale: 1, duration: 0.4, ease: 'back.out(3)', stagger: 0.14 }, 0.45);
+    tl.fromTo($$('.town-label', m), { opacity: 0 }, { opacity: 1, duration: 0.3, stagger: 0.14 }, 0.6);
     if (ring) loopWhileVisible(gsap, m, gsap.to(ring, { attr: { r: 30 }, opacity: 0, duration: 1.8, repeat: -1, ease: 'power1.out', paused: true }));
   });
 }
@@ -376,8 +379,16 @@ export function quiz() {
       cta.dataset.pick = one ? 'one-page' : 'sur-mesure';
       if (mt === 'del') cta.dataset.pickMaint = '1'; else delete cta.dataset.pickMaint;
     };
-    q.addEventListener('change', update);
+    let lastKey = '';
+    q.addEventListener('change', () => {
+      update();
+      const key = name.textContent + price.textContent;
+      const g = window.gsap;
+      if (key !== lastKey && g && !reduced()) g.fromTo([name, price, extra], { y: 10, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, stagger: 0.05, ease: 'power3.out', overwrite: true });
+      lastKey = key;
+    });
     update();
+    lastKey = name.textContent + price.textContent;
   });
 }
 
@@ -404,18 +415,25 @@ export function cles(gsap) {
   });
 }
 
-// ---------------------------------------------------------------- FAQ : ouverture animée
+// ---------------------------------------------------------------- accordéons : FAQ et comparateur
 export function faq(gsap) {
-  $$('details.qa').forEach((d) => {
-    const s = $('summary', d), a = $('.answer', d);
-    if (reduced()) return;
+  $$('details.qa, details.compare').forEach((d) => {
+    const s = $('summary', d), body = $('.answer, .acc-body', d);
+    if (!s || !body || reduced()) return;
+    let tw = null;
     s.addEventListener('click', (e) => {
       e.preventDefault();
-      if (d.open) {
-        gsap.to(a, { height: 0, opacity: 0, duration: 0.35, ease: 'power2.in', onComplete: () => { d.open = false; gsap.set(a, { clearProps: 'height,opacity' }); } });
+      const closing = d.open && !d.classList.contains('is-closing');
+      const from = d.open ? body.offsetHeight : 0;
+      const fromO = d.open ? Number(gsap.getProperty(body, 'opacity')) : 0;
+      if (tw) tw.kill();
+      if (closing) {
+        d.classList.add('is-closing');
+        tw = gsap.fromTo(body, { height: from }, { height: 0, opacity: 0, duration: 0.38, ease: 'power2.inOut', onComplete: () => { d.open = false; d.classList.remove('is-closing'); gsap.set(body, { clearProps: 'height,opacity' }); } });
       } else {
+        d.classList.remove('is-closing');
         d.open = true;
-        gsap.fromTo(a, { height: 0, opacity: 0 }, { height: 'auto', opacity: 1, duration: 0.5, ease: 'power3.out', clearProps: 'height' });
+        tw = gsap.fromTo(body, { height: from, opacity: fromO }, { height: 'auto', opacity: 1, duration: 0.5, ease: 'power3.out', onComplete: () => gsap.set(body, { clearProps: 'height,opacity' }) });
       }
     });
   });
@@ -429,8 +447,19 @@ export function devis(gsap) {
     const prev = $('[data-prev]', form), next = $('[data-next]', form), send = $('[data-send]', form);
     const card = form.closest('.form-card');
     const done = $('[data-done]', card);
-    let i = 0;
-    const show = (n, focus = true) => {
+    const bodyEl = $('.form-body', card) || card;
+    let i = 0, hTw = null;
+    const smoothHeight = (fn) => {
+      if (reduced()) { fn(); return; }
+      const h0 = bodyEl.offsetHeight;
+      if (hTw) { hTw.kill(); gsap.set(bodyEl, { clearProps: 'height,overflow' }); }
+      fn();
+      const h1 = bodyEl.offsetHeight;
+      if (Math.abs(h1 - h0) < 2) return;
+      hTw = gsap.fromTo(bodyEl, { height: h0, overflow: 'hidden' }, { height: h1, duration: 0.45, ease: 'power3.inOut', onComplete: () => gsap.set(bodyEl, { clearProps: 'height,overflow' }) });
+    };
+    const show = (n, focus = true) => smoothHeight(() => showStep(n, focus));
+    const showStep = (n, focus = true) => {
       i = n;
       steps.forEach((s, k) => { s.hidden = k !== n; });
       prog.forEach((p, k) => p.classList.toggle('on', k <= n));
@@ -462,20 +491,19 @@ export function devis(gsap) {
       if (!valid(i)) return;
       const dl = $('[data-done-deadline]', done);
       if (dl) dl.textContent = describeDeadline(new Date()).text;
-      form.hidden = true;
-      done.hidden = false;
-      done.focus();
+      smoothHeight(() => { form.hidden = true; done.hidden = false; });
+      done.focus({ preventScroll: true });
       if (!reduced()) {
         gsap.from(done.children, { y: 20, opacity: 0, duration: 0.55, stagger: 0.08, ease: 'power3.out' });
         const m = $('.done-mascot', done);
         if (m) gsap.from(m, { rotation: -14, scale: 0.6, duration: 0.9, ease: 'elastic.out(1, 0.5)' });
       }
     });
-    $('[data-restart]', done).addEventListener('click', () => { form.reset(); form.hidden = false; done.hidden = true; show(0); });
+    $('[data-restart]', done).addEventListener('click', () => { form.reset(); smoothHeight(() => { form.hidden = false; done.hidden = true; showStep(0); }); });
     form.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' && e.target.tagName === 'INPUT' && i < steps.length - 1) { e.preventDefault(); next.click(); }
     });
-    show(0, false);
+    showStep(0, false);
   });
 }
 
@@ -483,7 +511,7 @@ export function devis(gsap) {
 export function footerWord(gsap) {
   const w = $('.footer-word .fill');
   if (!w || reduced()) return;
-  gsap.fromTo(w, { clipPath: 'inset(0 100% 0 0)' }, { clipPath: 'inset(0 0% 0 0)', ease: 'none', scrollTrigger: { trigger: '.site-footer', start: 'top 85%', end: 'top 25%', scrub: true } });
+  gsap.fromTo(w, { clipPath: 'inset(0 100% 0 0)' }, { clipPath: 'inset(0 0% 0 0)', ease: 'none', scrollTrigger: { trigger: '.site-footer', start: 'top 85%', end: 'bottom bottom', scrub: true } });
 }
 
 // ---------------------------------------------------------------- page Création : une page ou plusieurs
@@ -492,21 +520,20 @@ export function pagesAnim(gsap) {
   if (!el || reduced()) return;
   const one = $('.pa-one', el), multi = $('.pa-multi', el), blks = $$('.pa-blk', el), sheets = $$('.pa-sheet', el);
   const l1 = $$('.pa-lab-one', el), l2 = $$('.pa-lab-multi', el);
-  const tl = gsap.timeline({ repeat: -1, repeatDelay: 0.6, delay: 1.2, paused: true });
+  const tl = gsap.timeline({ repeat: -1, repeatDelay: 0.3, paused: true });
   loopWhileVisible(gsap, el, tl);
-  tl.from(blks, { y: -30, opacity: 0, duration: 0.45, stagger: 0.1, ease: 'back.out(1.7)' })
-    .to({}, { duration: 1.2 })
+  tl.to({}, { duration: 1.6 })
     .to(one, { scale: 0.85, opacity: 0, duration: 0.45, transformOrigin: '50% 50%', ease: 'power2.in' })
     .to(l1, { opacity: 0, duration: 0.3 }, '<')
     .set(multi, { opacity: 1 })
-    .from(sheets, { x: (k) => (k - 1) * -195, rotation: (k) => (k - 1) * 8, opacity: 0, duration: 0.7, stagger: 0.08, ease: 'power3.out' })
+    .fromTo(sheets, { x: (k) => (k - 1) * -195, rotation: (k) => (k - 1) * 8, opacity: 0 }, { x: 0, rotation: 0, opacity: 1, duration: 0.7, stagger: 0.08, ease: 'power3.out', immediateRender: false })
     .to(l2, { opacity: 1, duration: 0.3 }, '<0.2')
     .to({}, { duration: 1.8 })
     .to(sheets, { x: (k) => (k - 1) * -195, opacity: 0, duration: 0.5, stagger: 0.05, ease: 'power2.in' })
     .to(l2, { opacity: 0, duration: 0.3 }, '<')
     .set(multi, { opacity: 0 })
-    .set(sheets, { x: 0, opacity: 1, rotation: 0 })
-    .to(one, { scale: 1, opacity: 1, duration: 0.4 })
+    .set(one, { scale: 1, opacity: 1 })
+    .fromTo(blks, { y: -30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, stagger: 0.08, ease: 'back.out(1.7)', immediateRender: false })
     .to(l1, { opacity: 1, duration: 0.3 }, '<');
 }
 

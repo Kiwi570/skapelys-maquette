@@ -28,7 +28,8 @@
 <link rel="apple-touch-icon" href="assets/img/marque/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/unbounded.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/site.css?v=2">
+<style>html,body{background:#071433}</style>
+<link rel="stylesheet" href="assets/css/site.css?v=3">
 <script>
 (function(){var d=document.documentElement;d.classList.remove('no-js');d.classList.add('js','intro');var m='';try{m=localStorage.getItem('sk-motion')||''}catch(e){}var r=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;if(m==='reduce'||(r&&m!=='full')){d.classList.add('motion-reduce');d.classList.remove('intro')}else if(m==='full'){d.classList.add('motion-full')}setTimeout(function(){d.classList.remove('intro')},2900)})();
 </script>
@@ -36,24 +37,24 @@
 <script defer src="assets/vendor/gsap/gsap.min.js"></script>
 <script defer src="assets/vendor/gsap/ScrollTrigger.min.js"></script>
 <script defer src="assets/vendor/gsap/SplitText.min.js"></script>
-<link rel="modulepreload" href="assets/js/main.js?v=2">
-<link rel="modulepreload" href="assets/js/modules/core.js?v=2">
-<link rel="modulepreload" href="assets/js/modules/sections.js?v=2">
-<link rel="modulepreload" href="assets/js/modules/deadline.js?v=2">
-<script type="module" src="assets/js/main.js?v=2"></script>
+<link rel="modulepreload" href="assets/js/main.js?v=3">
+<link rel="modulepreload" href="assets/js/modules/core.js?v=3">
+<link rel="modulepreload" href="assets/js/modules/sections.js?v=3">
+<link rel="modulepreload" href="assets/js/modules/deadline.js?v=3">
+<script type="module" src="assets/js/main.js?v=3"></script>
 </head>
 <body data-page="accueil">
 <a class="skip" href="#contenu">Aller au contenu</a>
-<div class="curtain" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+<div class="curtain" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><img class="curtain-logo" src="assets/img/marque/logo-symbole.webp" alt="" width="182" height="182"></div>
 <header class="site-header" id="haut">
   <div class="wrap">
-    <a class="brand" href="index.html" aria-label="Skapelys, accueil">
+    <a class="brand" href="/" aria-label="Skapelys, accueil">
       <img src="assets/img/marque/logo-blanc.webp" alt="Skapelys" width="388" height="147" decoding="async" fetchpriority="high">
     </a>
     <nav class="nav" aria-label="Navigation principale">
       <a href="#services">Services</a><a href="#realisations">Réalisations</a><a href="#tarifs">Tarifs</a><a href="#faq">FAQ</a>
-      <a href="creation-site-web-bourg-en-bresse.html">Création</a>
-      <a href="maintenance-site-wordpress-bourg-en-bresse.html">Maintenance</a>
+      <a href="/creation-site-web-bourg-en-bresse">Création</a>
+      <a href="/maintenance-site-wordpress-bourg-en-bresse">Maintenance</a>
       <a class="nav-phone" href="tel:+33771139991">07 71 13 99 91</a>
       <a class="btn" href="#contact" data-magnetic><span class="btn-label">Demander un devis</span></a>
     </nav>
@@ -63,8 +64,8 @@
 </header>
 <div class="mobile-menu" id="menu-mobile" hidden>
   <a href="#services" data-close>Services</a><a href="#realisations" data-close>Réalisations</a><a href="#tarifs" data-close>Tarifs</a><a href="#faq" data-close>FAQ</a>
-  <a href="creation-site-web-bourg-en-bresse.html" data-close>Création de site</a>
-  <a href="maintenance-site-wordpress-bourg-en-bresse.html" data-close>Maintenance</a>
+  <a href="/creation-site-web-bourg-en-bresse" data-close>Création de site</a>
+  <a href="/maintenance-site-wordpress-bourg-en-bresse" data-close>Maintenance</a>
   <div class="mm-foot">
     <span class="muted">Téléphone</span>
     <a href="tel:+33771139991" class="cote">07 71 13 99 91</a>
@@ -254,27 +255,27 @@
       </div>
     </div>
     <div class="metiers-track" data-track><article class="metier" data-metier data-hue="181" style="--acc:#ffb347">
-  <div class="media"><img src="assets/img/grok/metier-boulangerie-784.webp" alt="Mains d’un boulanger façonnant des boules de pâte avant l’aube" width="784" height="1168" decoding="async" loading="lazy" srcset="assets/img/grok/metier-boulangerie-480.webp 480w, assets/img/grok/metier-boulangerie-784.webp 784w" sizes="(max-width: 700px) 60vw, 30vw"></div>
+  <div class="media"><img src="assets/img/grok/metier-boulangerie-784.webp" alt="Mains d’un boulanger façonnant des boules de pâte avant l’aube" width="784" height="1168" decoding="async" srcset="assets/img/grok/metier-boulangerie-480.webp 480w, assets/img/grok/metier-boulangerie-784.webp 784w" sizes="(max-width: 700px) 60vw, 30vw"></div>
   <div class="mini-site" aria-hidden="true"><div class="ms-bar"><i></i><i></i><i></i><span>votre-boulangerie.fr</span></div><strong>Votre boulangerie</strong><div class="ms-lines"><i></i><i></i></div><span class="ms-cta" style="background:#ffb347">Nous contacter</span></div>
   <div class="metier-label"><h3>Boulangerie</h3><p>Horaires, produits de saison, commandes.</p></div>
 </article><article class="metier" data-metier data-hue="176" style="--acc:#d9a066">
-  <div class="media"><img src="assets/img/grok/metier-menuiserie-784.webp" alt="Mains d’un menuisier rabotant une planche de chêne" width="784" height="1168" decoding="async" loading="lazy" srcset="assets/img/grok/metier-menuiserie-480.webp 480w, assets/img/grok/metier-menuiserie-784.webp 784w" sizes="(max-width: 700px) 60vw, 30vw"></div>
+  <div class="media"><img src="assets/img/grok/metier-menuiserie-784.webp" alt="Mains d’un menuisier rabotant une planche de chêne" width="784" height="1168" decoding="async" srcset="assets/img/grok/metier-menuiserie-480.webp 480w, assets/img/grok/metier-menuiserie-784.webp 784w" sizes="(max-width: 700px) 60vw, 30vw"></div>
   <div class="mini-site" aria-hidden="true"><div class="ms-bar"><i></i><i></i><i></i><span>votre-atelier.fr</span></div><strong>Votre atelier</strong><div class="ms-lines"><i></i><i></i></div><span class="ms-cta" style="background:#d9a066">Nous contacter</span></div>
   <div class="metier-label"><h3>Menuiserie</h3><p>Réalisations en photos, zone d’intervention.</p></div>
 </article><article class="metier" data-metier data-hue="124" style="--acc:#ff7aa8">
-  <div class="media"><img src="assets/img/grok/metier-coiffure-784.webp" alt="Fauteuil vide dans un salon de coiffure à la fermeture" width="784" height="1168" decoding="async" loading="lazy" srcset="assets/img/grok/metier-coiffure-480.webp 480w, assets/img/grok/metier-coiffure-784.webp 784w" sizes="(max-width: 700px) 60vw, 30vw"></div>
+  <div class="media"><img src="assets/img/grok/metier-coiffure-784.webp" alt="Fauteuil vide dans un salon de coiffure à la fermeture" width="784" height="1168" decoding="async" srcset="assets/img/grok/metier-coiffure-480.webp 480w, assets/img/grok/metier-coiffure-784.webp 784w" sizes="(max-width: 700px) 60vw, 30vw"></div>
   <div class="mini-site" aria-hidden="true"><div class="ms-bar"><i></i><i></i><i></i><span>votre-salon.fr</span></div><strong>Votre salon</strong><div class="ms-lines"><i></i><i></i></div><span class="ms-cta" style="background:#ff7aa8">Nous contacter</span></div>
   <div class="metier-label"><h3>Salon de coiffure</h3><p>Prestations, tarifs, prise de rendez-vous.</p></div>
 </article><article class="metier" data-metier data-hue="191" style="--acc:#ffd23f">
-  <div class="media"><img src="assets/img/grok/metier-taxi-784.webp" alt="Berline sombre garée sous un réverbère, rue pavée de nuit" width="784" height="1168" decoding="async" loading="lazy" srcset="assets/img/grok/metier-taxi-480.webp 480w, assets/img/grok/metier-taxi-784.webp 784w" sizes="(max-width: 700px) 60vw, 30vw"></div>
+  <div class="media"><img src="assets/img/grok/metier-taxi-784.webp" alt="Berline sombre garée sous un réverbère, rue pavée de nuit" width="784" height="1168" decoding="async" srcset="assets/img/grok/metier-taxi-480.webp 480w, assets/img/grok/metier-taxi-784.webp 784w" sizes="(max-width: 700px) 60vw, 30vw"></div>
   <div class="mini-site" aria-hidden="true"><div class="ms-bar"><i></i><i></i><i></i><span>votre-taxi.fr</span></div><strong>Votre taxi</strong><div class="ms-lines"><i></i><i></i></div><span class="ms-cta" style="background:#ffd23f">Nous contacter</span></div>
   <div class="metier-label"><h3>Taxi</h3><p>Un numéro visible et une réservation simple.</p></div>
 </article><article class="metier" data-metier data-hue="162" style="--acc:#ff8a5c">
-  <div class="media"><img src="assets/img/grok/metier-restaurant-784.webp" alt="Mains d’un cuisinier dressant une assiette de saison" width="784" height="1168" decoding="async" loading="lazy" srcset="assets/img/grok/metier-restaurant-480.webp 480w, assets/img/grok/metier-restaurant-784.webp 784w" sizes="(max-width: 700px) 60vw, 30vw"></div>
+  <div class="media"><img src="assets/img/grok/metier-restaurant-784.webp" alt="Mains d’un cuisinier dressant une assiette de saison" width="784" height="1168" decoding="async" srcset="assets/img/grok/metier-restaurant-480.webp 480w, assets/img/grok/metier-restaurant-784.webp 784w" sizes="(max-width: 700px) 60vw, 30vw"></div>
   <div class="mini-site" aria-hidden="true"><div class="ms-bar"><i></i><i></i><i></i><span>votre-restaurant.fr</span></div><strong>Votre restaurant</strong><div class="ms-lines"><i></i><i></i></div><span class="ms-cta" style="background:#ff8a5c">Nous contacter</span></div>
   <div class="metier-label"><h3>Restaurant</h3><p>La carte, les horaires, la réservation.</p></div>
 </article><article class="metier" data-metier data-hue="-16" style="--acc:#6fd3ff">
-  <div class="media"><img src="assets/img/grok/metier-plomberie-784.webp" alt="Mains d’un plombier serrant un raccord en laiton à la clé" width="784" height="1168" decoding="async" loading="lazy" srcset="assets/img/grok/metier-plomberie-480.webp 480w, assets/img/grok/metier-plomberie-784.webp 784w" sizes="(max-width: 700px) 60vw, 30vw"></div>
+  <div class="media"><img src="assets/img/grok/metier-plomberie-784.webp" alt="Mains d’un plombier serrant un raccord en laiton à la clé" width="784" height="1168" decoding="async" srcset="assets/img/grok/metier-plomberie-480.webp 480w, assets/img/grok/metier-plomberie-784.webp 784w" sizes="(max-width: 700px) 60vw, 30vw"></div>
   <div class="mini-site" aria-hidden="true"><div class="ms-bar"><i></i><i></i><i></i><span>votre-entreprise.fr</span></div><strong>Votre entreprise</strong><div class="ms-lines"><i></i><i></i></div><span class="ms-cta" style="background:#6fd3ff">Nous contacter</span></div>
   <div class="metier-label"><h3>Plomberie</h3><p>Urgences, devis, secteur couvert.</p></div>
 </article></div>
@@ -285,7 +286,7 @@
       <div style="display:grid;gap:18px"><span class="eyebrow">Nos services</span><h2 id="services-titre" data-split>Un site qui vous ressemble.</h2></div>
       <p class="lead">Création, refonte et suivi : tout pour une présence en ligne soignée.</p>
     </div>
-    <div class="services-grid"><a class="service service--wide" href="creation-site-web-bourg-en-bresse.html" data-tilt data-service="creation">
+    <div class="services-grid"><a class="service service--wide" href="/creation-site-web-bourg-en-bresse" data-tilt data-service="creation">
   <div class="service-media"><img src="assets/img/grok/service-creation-1168.webp" alt="Cartes blanches et petits blocs assemblés en mise en page" width="1168" height="784" decoding="async" loading="lazy" srcset="assets/img/grok/service-creation-760.webp 760w, assets/img/grok/service-creation-1168.webp 1168w" sizes="(max-width: 680px) 92vw, (max-width: 1080px) 46vw, 33vw"><div class="service-anim"><div class="service-glass"><svg viewBox="0 0 300 200" aria-hidden="true" data-anim="creation"><g fill="#f4f6fa">
 <rect class="blk" x="20" y="18" width="260" height="22" rx="6" opacity=".95"/><rect class="blk" x="20" y="52" width="150" height="72" rx="8" fill="#ffd23f"/><rect class="blk" x="182" y="52" width="98" height="72" rx="8" fill="#2a6bfa"/>
 <rect class="blk" x="20" y="136" width="80" height="46" rx="8" opacity=".9"/><rect class="blk" x="110" y="136" width="80" height="46" rx="8" opacity=".9"/><rect class="blk" x="200" y="136" width="80" height="46" rx="8" opacity=".9"/></g></svg></div></div></div>
@@ -299,7 +300,7 @@
 </a><a class="service" href="https://skapelys.fr/referencement-seo-bourg-en-bresse/" target="_blank" rel="noopener" data-tilt data-service="seo">
   <div class="service-media"><img src="assets/img/grok/service-seo-1168.webp" alt="Vue aérienne nocturne d’une petite ville, un seul bâtiment éclairé" width="1168" height="784" decoding="async" loading="lazy" srcset="assets/img/grok/service-seo-760.webp 760w, assets/img/grok/service-seo-1168.webp 1168w" sizes="(max-width: 680px) 92vw, (max-width: 1080px) 46vw, 33vw"><div class="service-anim"><div class="service-glass"><svg viewBox="0 0 300 200" aria-hidden="true" data-anim="seo"><path d="M57 48v128M83 82v26M83 150v26" stroke="#9db8ea" stroke-width="1.5" fill="none" stroke-dasharray="3 4"/><g class="seo-row"><rect x="40" y="26" width="34" height="22" rx="5" fill="#2a6bfa"/><text x="57" y="41.5" font-size="12" font-family="JetBrains Mono, monospace" fill="#fff" text-anchor="middle">H1</text><rect class="seo-bar" x="84" y="32" width="190" height="10" rx="5" fill="#f4f6fa"/></g><g class="seo-row"><rect x="66" y="60" width="34" height="22" rx="5" fill="#2a6bfa"/><text x="83" y="75.5" font-size="12" font-family="JetBrains Mono, monospace" fill="#fff" text-anchor="middle">H2</text><rect class="seo-bar" x="110" y="66" width="150" height="10" rx="5" fill="#f4f6fa"/></g><g class="seo-row"><rect x="92" y="94" width="34" height="22" rx="5" fill="#2a6bfa"/><text x="109" y="109.5" font-size="12" font-family="JetBrains Mono, monospace" fill="#fff" text-anchor="middle">H3</text><rect class="seo-bar" x="136" y="100" width="120" height="10" rx="5" fill="#f4f6fa"/></g><g class="seo-row"><rect x="66" y="128" width="34" height="22" rx="5" fill="#2a6bfa"/><text x="83" y="143.5" font-size="12" font-family="JetBrains Mono, monospace" fill="#fff" text-anchor="middle">H2</text><rect class="seo-bar" x="110" y="134" width="160" height="10" rx="5" fill="#f4f6fa"/></g><g class="seo-row"><rect x="92" y="162" width="34" height="22" rx="5" fill="#2a6bfa"/><text x="109" y="177.5" font-size="12" font-family="JetBrains Mono, monospace" fill="#fff" text-anchor="middle">H3</text><rect class="seo-bar" x="136" y="168" width="110" height="10" rx="5" fill="#f4f6fa"/></g></svg></div></div></div>
   <div class="service-body"><h3>Référencement naturel</h3><p>Améliorez votre visibilité sur Google et attirez un trafic qualifié.</p><span class="service-more">En savoir plus <svg class="arrow" viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M4 10h11m-4.5-4.5L15 10l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="ext-badge">page du site actuel</span></span></div>
-</a><a class="service" href="maintenance-site-wordpress-bourg-en-bresse.html" data-tilt data-service="maintenance">
+</a><a class="service" href="/maintenance-site-wordpress-bourg-en-bresse" data-tilt data-service="maintenance">
   <div class="service-media"><img src="assets/img/grok/service-maintenance-1168.webp" alt="Mains réglant une roue de vélo sur un pied d’atelier" width="1168" height="784" decoding="async" loading="lazy" srcset="assets/img/grok/service-maintenance-760.webp 760w, assets/img/grok/service-maintenance-1168.webp 1168w" sizes="(max-width: 680px) 92vw, (max-width: 1080px) 46vw, 33vw"><div class="service-anim"><div class="service-glass"><svg viewBox="0 0 300 200" aria-hidden="true" data-anim="maintenance"><g class="mt-row"><text x="24" y="42" font-size="14" font-family="Geist, Arial, sans-serif" fill="#f4f6fa">WordPress</text><rect x="120" y="30" width="130" height="12" rx="6" fill="#1b3b7a"/><rect class="mt-bar" x="120" y="30" width="130" height="12" rx="6" fill="#2ed47a"/><g class="mt-ok"><circle cx="270" cy="36" r="10" fill="#2ed47a"/><path d="M265 36l3.5 3.2 6-6.4" stroke="#0b1838" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g></g><g class="mt-row"><text x="24" y="82" font-size="14" font-family="Geist, Arial, sans-serif" fill="#f4f6fa">Thème</text><rect x="120" y="70" width="130" height="12" rx="6" fill="#1b3b7a"/><rect class="mt-bar" x="120" y="70" width="130" height="12" rx="6" fill="#2ed47a"/><g class="mt-ok"><circle cx="270" cy="76" r="10" fill="#2ed47a"/><path d="M265 76l3.5 3.2 6-6.4" stroke="#0b1838" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g></g><g class="mt-row"><text x="24" y="122" font-size="14" font-family="Geist, Arial, sans-serif" fill="#f4f6fa">Extensions</text><rect x="120" y="110" width="130" height="12" rx="6" fill="#1b3b7a"/><rect class="mt-bar" x="120" y="110" width="130" height="12" rx="6" fill="#2ed47a"/><g class="mt-ok"><circle cx="270" cy="116" r="10" fill="#2ed47a"/><path d="M265 116l3.5 3.2 6-6.4" stroke="#0b1838" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g></g><g class="mt-row"><text x="24" y="162" font-size="14" font-family="Geist, Arial, sans-serif" fill="#f4f6fa">Sauvegarde</text><rect x="120" y="150" width="130" height="12" rx="6" fill="#1b3b7a"/><rect class="mt-bar" x="120" y="150" width="130" height="12" rx="6" fill="#2ed47a"/><g class="mt-ok"><circle cx="270" cy="156" r="10" fill="#2ed47a"/><path d="M265 156l3.5 3.2 6-6.4" stroke="#0b1838" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g></g></svg></div></div></div>
   <div class="service-body"><h3>Maintenance et suivi</h3><p>Nous veillons sur votre site et le faisons évoluer dans la durée.</p><span class="service-more">En savoir plus <svg class="arrow" viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M4 10h11m-4.5-4.5L15 10l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
 </a><a class="service" href="https://skapelys.fr/depannage-site-wordpress-bourg-en-bresse/" target="_blank" rel="noopener" data-tilt data-service="depannage">
@@ -334,7 +335,7 @@
     <div class="avis-head">
       <div class="score" data-score>
         <div class="score-num" aria-label="Note moyenne 5,0 sur 5"><span class="digit"><span>5</span></span><span>,</span><span class="digit"><span>0</span></span></div>
-        <div class="score-stars"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="empty" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/><path class="fill" style="clip-path:inset(0 0 0 0)" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path class="empty" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/><path class="fill" style="clip-path:inset(0 0 0 0)" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path class="empty" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/><path class="fill" style="clip-path:inset(0 0 0 0)" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path class="empty" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/><path class="fill" style="clip-path:inset(0 0 0 0)" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path class="empty" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/><path class="fill" style="clip-path:inset(0 0 0 0)" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/></svg></div>
+        <div class="score-stars"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="empty" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/><path class="fill" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path class="empty" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/><path class="fill" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path class="empty" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/><path class="fill" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path class="empty" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/><path class="fill" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path class="empty" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/><path class="fill" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/></svg></div>
         <div class="score-meta">sur Google, d’après 10 avis</div>
       </div>
       <div class="sec-head" style="margin-bottom:0">
@@ -361,7 +362,7 @@
 <circle class="ring" cx="313.2" cy="287.6" r="107.9"/><text class="ring-label" x="390.9" y="209.9">3 km</text><circle class="ring" cx="313.2" cy="287.6" r="215.8"/><text class="ring-label" x="468.6" y="132.2">6 km</text><circle class="ring" cx="313.2" cy="287.6" r="323.7"/><text class="ring-label" x="546.3" y="54.5">9 km</text><path class="link-line" pathLength="1" d="M313.2 287.6L284.6 91.2"/><path class="link-line" pathLength="1" d="M313.2 287.6L213.2 300.0"/><path class="link-line" pathLength="1" d="M313.2 287.6L260.8 395.6"/><path class="link-line" pathLength="1" d="M313.2 287.6L454.7 348.8"/><path class="link-line" pathLength="1" d="M313.2 287.6L466.9 426.8"/><path class="link-line" pathLength="1" d="M313.2 287.6L602.4 243.2"/>
 <circle class="hub-ring" cx="313.2" cy="287.6" r="14"/><circle class="hub" cx="313.2" cy="287.6" r="9"/>
 <text class="hub-label" x="331.2" y="273.6">Bourg-en-Bresse</text>
-<g class="town-g" data-town="0"><circle class="town" cx="284.6" cy="91.2" r="7"/><text class="town-num" x="284.6" y="96.2" text-anchor="middle">1</text><text class="town-label" x="298.6" y="96.2" text-anchor="start">Viriat</text></g><g class="town-g" data-town="1"><circle class="town" cx="213.2" cy="300.0" r="7"/><text class="town-num" x="213.2" y="305.0" text-anchor="middle">2</text><text class="town-label" x="199.2" y="305.0" text-anchor="end">Saint-Denis-lès-Bourg</text></g><g class="town-g" data-town="2"><circle class="town" cx="260.8" cy="395.6" r="7"/><text class="town-num" x="260.8" y="400.6" text-anchor="middle">3</text><text class="town-label" x="246.8" y="400.6" text-anchor="end">Péronnas</text></g><g class="town-g" data-town="3"><circle class="town" cx="454.7" cy="348.8" r="7"/><text class="town-num" x="454.7" y="353.8" text-anchor="middle">4</text><text class="town-label" x="468.7" y="353.8" text-anchor="start">Saint-Just</text></g><g class="town-g" data-town="4"><circle class="town" cx="466.9" cy="426.8" r="7"/><text class="town-num" x="466.9" y="431.8" text-anchor="middle">5</text><text class="town-label" x="480.9" y="431.8" text-anchor="start">Montagnat</text></g><g class="town-g" data-town="5"><circle class="town" cx="602.4" cy="243.2" r="7"/><text class="town-num" x="602.4" y="248.2" text-anchor="middle">6</text><text class="town-label" x="588.4" y="248.2" text-anchor="end">Jasseron</text></g><path class="scale" d="M150 448h71.9M150 442v12M221.9 442v12"/><text class="scale-label" x="150" y="434">2 km</text>
+<g class="town-g" data-town="0"><g class="town-dot"><circle class="town" cx="284.6" cy="91.2" r="7"/><circle class="town-big" cx="284.6" cy="91.2" r="19"/><text class="town-num" x="284.6" y="99.2" text-anchor="middle">1</text></g><text class="town-label" x="298.6" y="96.2" text-anchor="start">Viriat</text></g><g class="town-g" data-town="1"><g class="town-dot"><circle class="town" cx="213.2" cy="300.0" r="7"/><circle class="town-big" cx="213.2" cy="300.0" r="19"/><text class="town-num" x="213.2" y="308.0" text-anchor="middle">2</text></g><text class="town-label" x="199.2" y="305.0" text-anchor="end">Saint-Denis-lès-Bourg</text></g><g class="town-g" data-town="2"><g class="town-dot"><circle class="town" cx="260.8" cy="395.6" r="7"/><circle class="town-big" cx="260.8" cy="395.6" r="19"/><text class="town-num" x="260.8" y="403.6" text-anchor="middle">3</text></g><text class="town-label" x="246.8" y="400.6" text-anchor="end">Péronnas</text></g><g class="town-g" data-town="3"><g class="town-dot"><circle class="town" cx="454.7" cy="348.8" r="7"/><circle class="town-big" cx="454.7" cy="348.8" r="19"/><text class="town-num" x="454.7" y="356.8" text-anchor="middle">4</text></g><text class="town-label" x="468.7" y="353.8" text-anchor="start">Saint-Just</text></g><g class="town-g" data-town="4"><g class="town-dot"><circle class="town" cx="466.9" cy="426.8" r="7"/><circle class="town-big" cx="466.9" cy="426.8" r="19"/><text class="town-num" x="466.9" y="434.8" text-anchor="middle">5</text></g><text class="town-label" x="480.9" y="431.8" text-anchor="start">Montagnat</text></g><g class="town-g" data-town="5"><g class="town-dot"><circle class="town" cx="602.4" cy="243.2" r="7"/><circle class="town-big" cx="602.4" cy="243.2" r="19"/><text class="town-num" x="602.4" y="251.2" text-anchor="middle">6</text></g><text class="town-label" x="588.4" y="248.2" text-anchor="end">Jasseron</text></g><path class="scale" d="M150 448h71.9M150 442v12M221.9 442v12"/><text class="scale-label" x="150" y="434">2 km</text>
 </svg><ol class="map-legend" aria-hidden="true"><li>Viriat</li><li>Saint-Denis-lès-Bourg</li><li>Péronnas</li><li>Saint-Just</li><li>Montagnat</li><li>Jasseron</li></ol></div>
       </article>
       <article class="tile tile--chat" data-chat>
@@ -456,7 +457,7 @@
     </div>
     <details class="compare">
       <summary><span class="plus" aria-hidden="true">+</span>Comparer les deux formules</summary>
-      <div class="table-scroll">
+      <div class="acc-body"><div class="table-scroll">
         <table>
           <caption class="sr-only">Comparaison des formules One Page et Sur Mesure</caption>
           <thead><tr><th scope="col">Critère</th><th scope="col">Site One Page</th><th scope="col">Site Sur Mesure</th></tr></thead>
@@ -471,7 +472,7 @@
             <tr><th scope="row">Fiche Google Business Profile</th><td>Non</td><td>Création incluse</td></tr>
           </tbody>
         </table>
-      </div>
+      </div></div>
     </details>
     <form class="quiz" data-quiz aria-labelledby="quiz-titre" onsubmit="return false">
       <div class="quiz-bg" aria-hidden="true"><img src="assets/img/grok/accueil-tarifs-matiere-1168.webp" alt="" width="1168" height="784" decoding="async" loading="lazy" srcset="assets/img/grok/accueil-tarifs-matiere-760.webp 760w, assets/img/grok/accueil-tarifs-matiere-1168.webp 1168w" sizes="(max-width: 900px) 100vw, 60vw"></div>
@@ -528,7 +529,7 @@
     <div class="zone-copy">
       <div class="sec-head" style="margin-bottom:0"><span class="eyebrow">Votre agence web</span><h2 id="zone-titre" data-split>Agence web à <span class="nw">Bourg-en-Bresse</span> : des sites rapides et visibles sur Google.</h2></div>
       <div class="prose">
-        <p>Skapelys s’occupe de la <a href="creation-site-web-bourg-en-bresse.html">création de site internet</a>, vitrine ou sur mesure, et de la <a href="https://skapelys.fr/refonte-site-internet-bourg-en-bresse/">refonte de sites</a>, avec le <a href="https://skapelys.fr/referencement-seo-bourg-en-bresse/">référencement</a> et la <a href="maintenance-site-wordpress-bourg-en-bresse.html">maintenance</a> qui vont avec.</p>
+        <p>Skapelys s’occupe de la <a href="/creation-site-web-bourg-en-bresse">création de site internet</a>, vitrine ou sur mesure, et de la <a href="https://skapelys.fr/refonte-site-internet-bourg-en-bresse/">refonte de sites</a>, avec le <a href="https://skapelys.fr/referencement-seo-bourg-en-bresse/">référencement</a> et la <a href="/maintenance-site-wordpress-bourg-en-bresse">maintenance</a> qui vont avec.</p>
         <p>Nous sommes installés à Bourg-en-Bresse, dans l’Ain, et accompagnons aussi les entreprises de Viriat, Péronnas, Montagnat, Saint-Denis-lès-Bourg, Jasseron et Saint-Just. Nous travaillons également à distance avec des clients partout en France : un appel, un échange de messages, et votre projet avance, où que vous soyez.</p>
       </div>
       <ul class="towns" aria-label="Communes de la zone d’intervention"><li>Bourg-en-Bresse</li><li>Viriat</li><li>Péronnas</li><li>Montagnat</li><li>Saint-Denis-lès-Bourg</li><li>Jasseron</li><li>Saint-Just</li></ul>
@@ -584,6 +585,7 @@
     </div>
     <div class="form-card">
       <div class="form-mascot" aria-hidden="true"><img src="assets/img/mascotte/mascotte-coucou-240.webp" alt="" width="240" height="277" decoding="async" loading="lazy"></div>
+      <div class="form-body">
       <form class="devis" data-devis novalidate aria-label="Demande de devis">
         <div class="form-progress" aria-hidden="true"><span class="on">Votre besoin</span><span>Votre projet</span><span>Vos coordonnées</span></div>
         <fieldset class="form-step" data-step="0">
@@ -622,6 +624,7 @@
         <p class="form-demo">Maquette : rien n’a été envoyé.</p>
         <button class="btn btn--line on-light" type="button" data-restart><span class="btn-label">Faire une autre demande</span></button>
       </div>
+      </div>
     </div>
   </div>
 </section></main>
@@ -636,10 +639,10 @@
       <div>
         <h2 class="footer-h">Services</h2>
         <ul>
-          <li><a href="creation-site-web-bourg-en-bresse.html">Création de site</a></li>
+          <li><a href="/creation-site-web-bourg-en-bresse">Création de site</a></li>
           <li><a href="https://skapelys.fr/refonte-site-internet-bourg-en-bresse/" class="ext">Refonte de site</a></li>
           <li><a href="https://skapelys.fr/referencement-seo-bourg-en-bresse/" class="ext">Référencement SEO</a></li>
-          <li><a href="maintenance-site-wordpress-bourg-en-bresse.html">Maintenance</a></li>
+          <li><a href="/maintenance-site-wordpress-bourg-en-bresse">Maintenance</a></li>
           <li><a href="https://skapelys.fr/depannage-site-wordpress-bourg-en-bresse/" class="ext">Dépannage</a></li>
         </ul>
       </div>

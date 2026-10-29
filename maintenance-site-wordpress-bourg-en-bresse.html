@@ -28,7 +28,8 @@
 <link rel="apple-touch-icon" href="assets/img/marque/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/unbounded.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/site.css?v=2">
+<style>html,body{background:#071433}</style>
+<link rel="stylesheet" href="assets/css/site.css?v=3">
 <script>
 (function(){var d=document.documentElement;d.classList.remove('no-js');d.classList.add('js','intro');var m='';try{m=localStorage.getItem('sk-motion')||''}catch(e){}var r=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;if(m==='reduce'||(r&&m!=='full')){d.classList.add('motion-reduce');d.classList.remove('intro')}else if(m==='full'){d.classList.add('motion-full')}setTimeout(function(){d.classList.remove('intro')},2900)})();
 </script>
@@ -36,24 +37,24 @@
 <script defer src="assets/vendor/gsap/gsap.min.js"></script>
 <script defer src="assets/vendor/gsap/ScrollTrigger.min.js"></script>
 <script defer src="assets/vendor/gsap/SplitText.min.js"></script>
-<link rel="modulepreload" href="assets/js/main.js?v=2">
-<link rel="modulepreload" href="assets/js/modules/core.js?v=2">
-<link rel="modulepreload" href="assets/js/modules/sections.js?v=2">
-<link rel="modulepreload" href="assets/js/modules/deadline.js?v=2">
-<script type="module" src="assets/js/main.js?v=2"></script>
+<link rel="modulepreload" href="assets/js/main.js?v=3">
+<link rel="modulepreload" href="assets/js/modules/core.js?v=3">
+<link rel="modulepreload" href="assets/js/modules/sections.js?v=3">
+<link rel="modulepreload" href="assets/js/modules/deadline.js?v=3">
+<script type="module" src="assets/js/main.js?v=3"></script>
 </head>
 <body data-page="maintenance">
 <a class="skip" href="#contenu">Aller au contenu</a>
-<div class="curtain" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+<div class="curtain" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><img class="curtain-logo" src="assets/img/marque/logo-symbole.webp" alt="" width="182" height="182"></div>
 <header class="site-header" id="haut">
   <div class="wrap">
-    <a class="brand" href="index.html" aria-label="Skapelys, accueil">
+    <a class="brand" href="/" aria-label="Skapelys, accueil">
       <img src="assets/img/marque/logo-blanc.webp" alt="Skapelys" width="388" height="147" decoding="async" fetchpriority="high">
     </a>
     <nav class="nav" aria-label="Navigation principale">
-      <a href="index.html#services">Services</a><a href="index.html#realisations">Réalisations</a><a href="index.html#tarifs">Tarifs</a><a href="#faq">FAQ</a>
-      <a href="creation-site-web-bourg-en-bresse.html">Création</a>
-      <a href="maintenance-site-wordpress-bourg-en-bresse.html" aria-current="page">Maintenance</a>
+      <a href="/#services">Services</a><a href="/#realisations">Réalisations</a><a href="/#tarifs">Tarifs</a><a href="#faq">FAQ</a>
+      <a href="/creation-site-web-bourg-en-bresse">Création</a>
+      <a href="/maintenance-site-wordpress-bourg-en-bresse" aria-current="page">Maintenance</a>
       <a class="nav-phone" href="tel:+33771139991">07 71 13 99 91</a>
       <a class="btn" href="#contact" data-magnetic><span class="btn-label">Demander un devis</span></a>
     </nav>
@@ -62,9 +63,9 @@
   <div class="progress" aria-hidden="true"><i class="progress-fill"></i></div>
 </header>
 <div class="mobile-menu" id="menu-mobile" hidden>
-  <a href="index.html#services" data-close>Services</a><a href="index.html#realisations" data-close>Réalisations</a><a href="index.html#tarifs" data-close>Tarifs</a><a href="#faq" data-close>FAQ</a>
-  <a href="creation-site-web-bourg-en-bresse.html" data-close>Création de site</a>
-  <a href="maintenance-site-wordpress-bourg-en-bresse.html" data-close>Maintenance</a>
+  <a href="/#services" data-close>Services</a><a href="/#realisations" data-close>Réalisations</a><a href="/#tarifs" data-close>Tarifs</a><a href="#faq" data-close>FAQ</a>
+  <a href="/creation-site-web-bourg-en-bresse" data-close>Création de site</a>
+  <a href="/maintenance-site-wordpress-bourg-en-bresse" data-close>Maintenance</a>
   <div class="mm-foot">
     <span class="muted">Téléphone</span>
     <a href="tel:+33771139991" class="cote">07 71 13 99 91</a>
@@ -87,7 +88,7 @@
   <div class="hero-vignette" aria-hidden="true"></div>
   <div class="wrap">
     <div class="hero-copy">
-      <nav class="breadcrumb" aria-label="Fil d’Ariane" data-intro><a href="index.html">Accueil</a><span aria-hidden="true">/</span><span aria-current="page">Maintenance</span></nav>
+      <nav class="breadcrumb" aria-label="Fil d’Ariane" data-intro><a href="/">Accueil</a><span aria-hidden="true">/</span><span aria-current="page">Maintenance</span></nav>
       <div class="proof" data-intro><span class="proof-item"><span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" width="16" height="16"><path fill="currentColor" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" width="16" height="16"><path fill="currentColor" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" width="16" height="16"><path fill="currentColor" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" width="16" height="16"><path fill="currentColor" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" width="16" height="16"><path fill="currentColor" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/></svg></span><span><strong>5,0</strong> sur Google</span></span><span class="proof-sep" aria-hidden="true"></span><span class="proof-item"><strong>10</strong> avis vérifiés</span></div>
       <h1 id="hero-titre"><span class="h1-main" data-hero-title>Maintenance de site internet à <span class="nw">Bourg-en-Bresse</span></span></h1>
       <p class="h1-sub" data-intro>Mises à jour, sauvegardes, sécurité et petites modifications : nous entretenons votre site, WordPress ou non, pour qu’il reste fiable. 50 € par mois.</p>
@@ -167,7 +168,7 @@
     <div class="avis-head">
       <div class="score" data-score>
         <div class="score-num" aria-label="Note moyenne 5,0 sur 5"><span class="digit"><span>5</span></span><span>,</span><span class="digit"><span>0</span></span></div>
-        <div class="score-stars"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="empty" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/><path class="fill" style="clip-path:inset(0 0 0 0)" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path class="empty" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/><path class="fill" style="clip-path:inset(0 0 0 0)" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path class="empty" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/><path class="fill" style="clip-path:inset(0 0 0 0)" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path class="empty" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/><path class="fill" style="clip-path:inset(0 0 0 0)" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path class="empty" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/><path class="fill" style="clip-path:inset(0 0 0 0)" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/></svg></div>
+        <div class="score-stars"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="empty" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/><path class="fill" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path class="empty" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/><path class="fill" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path class="empty" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/><path class="fill" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path class="empty" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/><path class="fill" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path class="empty" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/><path class="fill" d="M12 2.6l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/></svg></div>
         <div class="score-meta">sur Google, d’après 10 avis</div>
       </div>
       <div class="sec-head" style="margin-bottom:0">
@@ -227,6 +228,7 @@
     </div>
     <div class="form-card">
       <div class="form-mascot" aria-hidden="true"><img src="assets/img/mascotte/mascotte-coucou-240.webp" alt="" width="240" height="277" decoding="async" loading="lazy"></div>
+      <div class="form-body">
       <form class="devis" data-devis novalidate aria-label="Demande de devis">
         <div class="form-progress" aria-hidden="true"><span class="on">Votre besoin</span><span>Votre projet</span><span>Vos coordonnées</span></div>
         <fieldset class="form-step" data-step="0">
@@ -265,6 +267,7 @@
         <p class="form-demo">Maquette : rien n’a été envoyé.</p>
         <button class="btn btn--line on-light" type="button" data-restart><span class="btn-label">Faire une autre demande</span></button>
       </div>
+      </div>
     </div>
   </div>
 </section></main>
@@ -279,10 +282,10 @@
       <div>
         <h2 class="footer-h">Services</h2>
         <ul>
-          <li><a href="creation-site-web-bourg-en-bresse.html">Création de site</a></li>
+          <li><a href="/creation-site-web-bourg-en-bresse">Création de site</a></li>
           <li><a href="https://skapelys.fr/refonte-site-internet-bourg-en-bresse/" class="ext">Refonte de site</a></li>
           <li><a href="https://skapelys.fr/referencement-seo-bourg-en-bresse/" class="ext">Référencement SEO</a></li>
-          <li><a href="maintenance-site-wordpress-bourg-en-bresse.html">Maintenance</a></li>
+          <li><a href="/maintenance-site-wordpress-bourg-en-bresse">Maintenance</a></li>
           <li><a href="https://skapelys.fr/depannage-site-wordpress-bourg-en-bresse/" class="ext">Dépannage</a></li>
         </ul>
       </div>
