@@ -1,7 +1,8 @@
 // Point d'entrée de la maquette Skapelys.
-import * as core from './modules/core.js?v=3';
-import * as S from './modules/sections.js?v=3';
-import { mountDeadlines } from './modules/deadline.js?v=3';
+import * as core from './modules/core.js?v=4';
+import * as S from './modules/sections.js?v=4';
+import { mountDeadlines } from './modules/deadline.js?v=4';
+import * as P from './modules/pages.js?v=4';
 
 const html = document.documentElement;
 const gsap = window.gsap;
@@ -10,12 +11,14 @@ const SplitText = window.SplitText;
 
 function basics() {
   core.header();
+  P.megaMenu();
   core.motionToggle();
   core.copyButtons();
   mountDeadlines();
   S.quiz();
   S.picks();
   S.ribbons();
+  P.toc();
 }
 
 // Arrivée sur une ancre (#tarifs…) : une seule fois, et jamais si le visiteur a déjà défilé
@@ -40,6 +43,7 @@ async function start() {
     html.classList.add('no-gl');
     const c = document.querySelector('.curtain'); if (c) c.style.display = 'none';
     basics();
+    P.audit(null); P.beforeAfter(null); P.versus(null); P.serp(null); P.fixHero(null); P.process(null, null); P.pannes(null);
     return;
   }
   gsap.registerPlugin(ScrollTrigger, SplitText);
@@ -52,6 +56,7 @@ async function start() {
   S.faq(gsap);
   const scroller = core.smoothScroll(gsap);
   core.anchors(scroller);
+  P.audit(scroller);
   core.pageTransitions(gsap);
 
   // le champ de lignes WebGL n'apparaît qu'après l'ouverture ; sans WebGL, la grille CSS prend le relais
@@ -60,7 +65,7 @@ async function start() {
   if (glHost && !glOk) html.classList.add('no-gl');
   const startGL = () => {
     if (!glOk) return;
-    import('./modules/gl.js?v=3').then((m) => { if (!m.mountField(glHost, gsap)) html.classList.add('no-gl'); }).catch(() => html.classList.add('no-gl'));
+    import('./modules/gl.js?v=4').then((m) => { if (!m.mountField(glHost, gsap)) html.classList.add('no-gl'); }).catch(() => html.classList.add('no-gl'));
   };
   S.heroIntro(gsap, SplitText, core.curtainOut(gsap), () => { html.dataset.introDone = String(Math.round(performance.now())); startGL(); });
 
@@ -83,6 +88,13 @@ async function start() {
   S.pagesAnim(gsap);
   S.dashboard(gsap);
   S.checklists(gsap);
+  P.beforeAfter(gsap);
+  P.versus(ScrollTrigger);
+  P.serp(gsap);
+  P.seoIcons(gsap, ScrollTrigger);
+  P.fixHero(gsap);
+  P.process(gsap, ScrollTrigger);
+  P.pannes(ScrollTrigger);
   core.magnetic(gsap);
   core.tilt(gsap);
   core.reticle(gsap);

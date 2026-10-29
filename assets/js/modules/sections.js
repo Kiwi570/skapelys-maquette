@@ -1,6 +1,6 @@
 // Animations propres à chaque section de la maquette Skapelys.
-import { reduced, isMobile, finePointer } from './core.js?v=3';
-import { describeDeadline } from './deadline.js?v=3';
+import { reduced, isMobile, finePointer } from './core.js?v=4';
+import { describeDeadline } from './deadline.js?v=4';
 
 const $ = (s, r = document) => r.querySelector(s);
 
@@ -78,14 +78,16 @@ export function heroIntro(gsap, SplitText, curtainTl, onDone) {
   const title = $('[data-hero-title]', hero);
   const intro = $$('[data-intro]', hero);
   const visual = $('[data-intro-visual]', hero);
-  const browserEl = $('.browser', hero);
+  // seule une fenêtre « chantier » (svg.site-svg) se construit à l'ouverture
+  const b0 = $('.browser', hero);
+  const browserEl = b0 && $('svg.site-svg', b0) ? b0 : null;
   const mascot = $('[data-mascot]', hero) || $('.mascot-peek', hero);
   if (reduced()) { html.classList.remove('intro'); onDone && onDone(); return; }
 
   const split = title ? SplitText.create(title, { type: 'lines', mask: 'lines', linesClass: 'split-line' }) : null;
   gsap.set(intro, { y: 22, opacity: 0 });
   if (split) gsap.set(split.lines, { yPercent: 108 });
-  gsap.set(visual, { y: 40, opacity: 0, rotationX: 8, transformPerspective: 1200, transformOrigin: '50% 100%' });
+  if (visual) gsap.set(visual, { y: 40, opacity: 0, rotationX: 8, transformPerspective: 1200, transformOrigin: '50% 100%' });
   let parts = null;
   if (browserEl) {
     parts = siteParts(browserEl);
@@ -100,7 +102,7 @@ export function heroIntro(gsap, SplitText, curtainTl, onDone) {
   tl.add(curtainTl, 0);
   if (split) tl.to(split.lines, { yPercent: 0, duration: 0.85, ease: 'power4.out', stagger: 0.08, onComplete: () => { html.dataset.titleDone = String(Math.round(performance.now())); split.revert(); } }, 0.22);
   tl.to(intro, { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out', stagger: 0.07 }, 0.38);
-  tl.to(visual, { y: 0, opacity: 1, rotationX: 0, duration: 0.75, ease: 'power3.out' }, 0.3);
+  if (visual) tl.to(visual, { y: 0, opacity: 1, rotationX: 0, duration: 0.75, ease: 'power3.out' }, 0.3);
   if (parts) {
     if (parts.url) tl.add(typeUrl(gsap, parts.url, browserEl.closest('.notfound') ? 'skapelys.fr/page-introuvable' : 'votre-entreprise.fr', 0.5), 0.45);
     const nf = !!browserEl.closest('.notfound');
@@ -109,7 +111,7 @@ export function heroIntro(gsap, SplitText, curtainTl, onDone) {
   }
   if (mascot) tl.to(mascot, { y: 0, rotation: 0, opacity: 1, duration: 0.7, ease: 'back.out(2)' }, '>-0.35');
   // la perspective d'entrée est retirée une fois posée (pas de calque 3D permanent)
-  tl.set(visual, { clearProps: 'transform,transformPerspective,opacity' });
+  if (visual) tl.set(visual, { clearProps: 'transform,transformPerspective,opacity' });
   return tl;
 }
 
@@ -395,12 +397,17 @@ export function quiz() {
 // Un bouton de formule présélectionne le formulaire de devis
 export function picks() {
   document.addEventListener('click', (e) => {
+    const nb = e.target.closest && e.target.closest('[data-pick-need]');
+    if (nb) { const n = document.getElementById('besoin-' + nb.dataset.pickNeed); if (n) n.checked = true; return; }
     const b = e.target.closest && e.target.closest('[data-pick]');
     if (!b) return;
     const v = b.dataset.pick;
     const map = { 'one-page': 'formule-one-page', 'sur-mesure': 'formule-sur-mesure', maintenance: 'formule-maintenance' };
     const r = document.getElementById(map[v]);
     if (r) r.checked = true;
+    // sur la page Refonte, une formule reste une refonte
+    const cur = document.querySelector('input[name="besoin"]:checked');
+    if (v !== 'maintenance' && cur && cur.id === 'besoin-refonte') return;
     const need = document.getElementById(v === 'maintenance' ? 'besoin-maintenance' : 'besoin-creation');
     if (need) need.checked = true;
   });

@@ -62,7 +62,7 @@ export function smoothScroll(gsap) {
 // Position d'arrivée d'une ancre : les sections ont leur propre marge, les autres éléments passent sous l'en-tête
 export function anchorY(el) {
   const header = parseFloat(getComputedStyle(html).getPropertyValue('--header-h')) || 72;
-  return Math.round(el.getBoundingClientRect().top + scrollY - (el.matches('section, .hero') ? 0 : header + 16));
+  return Math.round(el.getBoundingClientRect().top + scrollY - (el.matches('section:not(.doc-sec), .hero') ? 0 : header + 16));
 }
 
 // ---------- ancres internes

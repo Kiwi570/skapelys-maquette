@@ -29,7 +29,7 @@
 <link rel="preload" href="/assets/fonts/unbounded.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
 <style>html,body{background:#071433}</style>
-<link rel="stylesheet" href="/assets/css/site.css?v=3">
+<link rel="stylesheet" href="/assets/css/site.css?v=4">
 <script>
 (function(){var d=document.documentElement;d.classList.remove('no-js');d.classList.add('js','intro');var m='';try{m=localStorage.getItem('sk-motion')||''}catch(e){}var r=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;if(m==='reduce'||(r&&m!=='full')){d.classList.add('motion-reduce');d.classList.remove('intro')}else if(m==='full'){d.classList.add('motion-full')}setTimeout(function(){d.classList.remove('intro')},2900)})();
 </script>
@@ -37,11 +37,11 @@
 <script defer src="/assets/vendor/gsap/gsap.min.js"></script>
 <script defer src="/assets/vendor/gsap/ScrollTrigger.min.js"></script>
 <script defer src="/assets/vendor/gsap/SplitText.min.js"></script>
-<link rel="modulepreload" href="/assets/js/main.js?v=3">
-<link rel="modulepreload" href="/assets/js/modules/core.js?v=3">
-<link rel="modulepreload" href="/assets/js/modules/sections.js?v=3">
-<link rel="modulepreload" href="/assets/js/modules/deadline.js?v=3">
-<script type="module" src="/assets/js/main.js?v=3"></script>
+<link rel="modulepreload" href="/assets/js/main.js?v=4">
+<link rel="modulepreload" href="/assets/js/modules/core.js?v=4">
+<link rel="modulepreload" href="/assets/js/modules/sections.js?v=4">
+<link rel="modulepreload" href="/assets/js/modules/deadline.js?v=4">
+<script type="module" src="/assets/js/main.js?v=4"></script>
 </head>
 <body data-page="404">
 <a class="skip" href="#contenu">Aller au contenu</a>
@@ -52,9 +52,14 @@
       <img src="/assets/img/marque/logo-blanc.webp" alt="Skapelys" width="388" height="147" decoding="async" fetchpriority="high">
     </a>
     <nav class="nav" aria-label="Navigation principale">
-      <a href="/#services">Services</a><a href="/#realisations">Réalisations</a><a href="/#tarifs">Tarifs</a><a href="/#faq">FAQ</a>
-      <a href="/creation-site-web-bourg-en-bresse">Création</a>
-      <a href="/maintenance-site-wordpress-bourg-en-bresse">Maintenance</a>
+      <div class="nav-item">
+        <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="menu-services">Services<svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M2.5 4.5L6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="mega" id="menu-services" hidden>
+          <ul class="mega-list"><li><a class="mega-item" href="/creation-site-web-bourg-en-bresse"><span class="mega-thumb"><img src="/assets/img/grok/service-creation-760.webp" alt="" width="160" height="107" loading="lazy" decoding="async"></span><span class="mega-txt"><strong>Création de site</strong><span>Vitrine dès 690 €, sur mesure dès 990 €</span></span></a></li><li><a class="mega-item" href="/refonte-site-internet-bourg-en-bresse"><span class="mega-thumb"><img src="/assets/img/grok/service-refonte-760.webp" alt="" width="160" height="107" loading="lazy" decoding="async"></span><span class="mega-txt"><strong>Refonte de site</strong><span>Remettre à neuf sans perdre son référencement</span></span></a></li><li><a class="mega-item" href="/referencement-seo-bourg-en-bresse"><span class="mega-thumb"><img src="/assets/img/grok/service-seo-760.webp" alt="" width="160" height="107" loading="lazy" decoding="async"></span><span class="mega-txt"><strong>Référencement SEO</strong><span>Monter dans les résultats de Google</span></span></a></li><li><a class="mega-item" href="/maintenance-site-wordpress-bourg-en-bresse"><span class="mega-thumb"><img src="/assets/img/grok/service-maintenance-760.webp" alt="" width="160" height="107" loading="lazy" decoding="async"></span><span class="mega-txt"><strong>Maintenance</strong><span>Mises à jour et sauvegardes, 50 € par mois</span></span></a></li><li><a class="mega-item" href="/depannage-site-wordpress-bourg-en-bresse"><span class="mega-thumb"><img src="/assets/img/grok/service-depannage-760.webp" alt="" width="160" height="107" loading="lazy" decoding="async"></span><span class="mega-txt"><strong>Dépannage</strong><span>Page blanche, erreur, site piraté</span></span></a></li></ul>
+          <a class="mega-all" href="/#services">Voir tous les services sur l’accueil</a>
+        </div>
+      </div>
+      <a href="/#realisations">Réalisations</a><a href="/#tarifs">Tarifs</a><a href="/#faq">FAQ</a>
       <a class="nav-phone" href="tel:+33771139991">07 71 13 99 91</a>
       <a class="btn" href="/#contact" data-magnetic><span class="btn-label">Demander un devis</span></a>
     </nav>
@@ -63,9 +68,9 @@
   <div class="progress" aria-hidden="true"><i class="progress-fill"></i></div>
 </header>
 <div class="mobile-menu" id="menu-mobile" hidden>
-  <a href="/#services" data-close>Services</a><a href="/#realisations" data-close>Réalisations</a><a href="/#tarifs" data-close>Tarifs</a><a href="/#faq" data-close>FAQ</a>
-  <a href="/creation-site-web-bourg-en-bresse" data-close>Création de site</a>
-  <a href="/maintenance-site-wordpress-bourg-en-bresse" data-close>Maintenance</a>
+  <a href="/" data-close>Accueil</a>
+  <div class="mm-group"><span class="mm-label">Services</span><ul><li><a href="/creation-site-web-bourg-en-bresse" data-close>Création de site</a></li><li><a href="/refonte-site-internet-bourg-en-bresse" data-close>Refonte de site</a></li><li><a href="/referencement-seo-bourg-en-bresse" data-close>Référencement SEO</a></li><li><a href="/maintenance-site-wordpress-bourg-en-bresse" data-close>Maintenance</a></li><li><a href="/depannage-site-wordpress-bourg-en-bresse" data-close>Dépannage</a></li></ul></div>
+  <a href="/#realisations" data-close>Réalisations</a><a href="/#tarifs" data-close>Tarifs</a><a href="/#faq" data-close>FAQ</a>
   <div class="mm-foot">
     <span class="muted">Téléphone</span>
     <a href="tel:+33771139991" class="cote">07 71 13 99 91</a>
@@ -165,10 +170,10 @@
         <h2 class="footer-h">Services</h2>
         <ul>
           <li><a href="/creation-site-web-bourg-en-bresse">Création de site</a></li>
-          <li><a href="https://skapelys.fr/refonte-site-internet-bourg-en-bresse/" class="ext">Refonte de site</a></li>
-          <li><a href="https://skapelys.fr/referencement-seo-bourg-en-bresse/" class="ext">Référencement SEO</a></li>
+          <li><a href="/refonte-site-internet-bourg-en-bresse">Refonte de site</a></li>
+          <li><a href="/referencement-seo-bourg-en-bresse">Référencement SEO</a></li>
           <li><a href="/maintenance-site-wordpress-bourg-en-bresse">Maintenance</a></li>
-          <li><a href="https://skapelys.fr/depannage-site-wordpress-bourg-en-bresse/" class="ext">Dépannage</a></li>
+          <li><a href="/depannage-site-wordpress-bourg-en-bresse">Dépannage</a></li>
         </ul>
       </div>
       <div>
@@ -183,8 +188,8 @@
       <div>
         <h2 class="footer-h">Informations</h2>
         <ul>
-          <li><a href="https://skapelys.fr/mentions-legales/" class="ext">Mentions légales</a></li>
-          <li><a href="https://skapelys.fr/politique-de-confidentialite/" class="ext">Politique de confidentialité</a></li>
+          <li><a href="/mentions-legales">Mentions légales</a></li>
+          <li><a href="/politique-de-confidentialite">Politique de confidentialité</a></li>
         </ul>
       </div>
     </div>

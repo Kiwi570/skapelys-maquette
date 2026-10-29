@@ -29,7 +29,7 @@
 <link rel="preload" href="assets/fonts/unbounded.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
 <style>html,body{background:#071433}</style>
-<link rel="stylesheet" href="assets/css/site.css?v=3">
+<link rel="stylesheet" href="assets/css/site.css?v=4">
 <script>
 (function(){var d=document.documentElement;d.classList.remove('no-js');d.classList.add('js','intro');var m='';try{m=localStorage.getItem('sk-motion')||''}catch(e){}var r=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;if(m==='reduce'||(r&&m!=='full')){d.classList.add('motion-reduce');d.classList.remove('intro')}else if(m==='full'){d.classList.add('motion-full')}setTimeout(function(){d.classList.remove('intro')},2900)})();
 </script>
@@ -37,11 +37,11 @@
 <script defer src="assets/vendor/gsap/gsap.min.js"></script>
 <script defer src="assets/vendor/gsap/ScrollTrigger.min.js"></script>
 <script defer src="assets/vendor/gsap/SplitText.min.js"></script>
-<link rel="modulepreload" href="assets/js/main.js?v=3">
-<link rel="modulepreload" href="assets/js/modules/core.js?v=3">
-<link rel="modulepreload" href="assets/js/modules/sections.js?v=3">
-<link rel="modulepreload" href="assets/js/modules/deadline.js?v=3">
-<script type="module" src="assets/js/main.js?v=3"></script>
+<link rel="modulepreload" href="assets/js/main.js?v=4">
+<link rel="modulepreload" href="assets/js/modules/core.js?v=4">
+<link rel="modulepreload" href="assets/js/modules/sections.js?v=4">
+<link rel="modulepreload" href="assets/js/modules/deadline.js?v=4">
+<script type="module" src="assets/js/main.js?v=4"></script>
 </head>
 <body data-page="accueil">
 <a class="skip" href="#contenu">Aller au contenu</a>
@@ -52,9 +52,14 @@
       <img src="assets/img/marque/logo-blanc.webp" alt="Skapelys" width="388" height="147" decoding="async" fetchpriority="high">
     </a>
     <nav class="nav" aria-label="Navigation principale">
-      <a href="#services">Services</a><a href="#realisations">Réalisations</a><a href="#tarifs">Tarifs</a><a href="#faq">FAQ</a>
-      <a href="/creation-site-web-bourg-en-bresse">Création</a>
-      <a href="/maintenance-site-wordpress-bourg-en-bresse">Maintenance</a>
+      <div class="nav-item">
+        <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="menu-services">Services<svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M2.5 4.5L6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="mega" id="menu-services" hidden>
+          <ul class="mega-list"><li><a class="mega-item" href="/creation-site-web-bourg-en-bresse"><span class="mega-thumb"><img src="assets/img/grok/service-creation-760.webp" alt="" width="160" height="107" loading="lazy" decoding="async"></span><span class="mega-txt"><strong>Création de site</strong><span>Vitrine dès 690 €, sur mesure dès 990 €</span></span></a></li><li><a class="mega-item" href="/refonte-site-internet-bourg-en-bresse"><span class="mega-thumb"><img src="assets/img/grok/service-refonte-760.webp" alt="" width="160" height="107" loading="lazy" decoding="async"></span><span class="mega-txt"><strong>Refonte de site</strong><span>Remettre à neuf sans perdre son référencement</span></span></a></li><li><a class="mega-item" href="/referencement-seo-bourg-en-bresse"><span class="mega-thumb"><img src="assets/img/grok/service-seo-760.webp" alt="" width="160" height="107" loading="lazy" decoding="async"></span><span class="mega-txt"><strong>Référencement SEO</strong><span>Monter dans les résultats de Google</span></span></a></li><li><a class="mega-item" href="/maintenance-site-wordpress-bourg-en-bresse"><span class="mega-thumb"><img src="assets/img/grok/service-maintenance-760.webp" alt="" width="160" height="107" loading="lazy" decoding="async"></span><span class="mega-txt"><strong>Maintenance</strong><span>Mises à jour et sauvegardes, 50 € par mois</span></span></a></li><li><a class="mega-item" href="/depannage-site-wordpress-bourg-en-bresse"><span class="mega-thumb"><img src="assets/img/grok/service-depannage-760.webp" alt="" width="160" height="107" loading="lazy" decoding="async"></span><span class="mega-txt"><strong>Dépannage</strong><span>Page blanche, erreur, site piraté</span></span></a></li></ul>
+          <a class="mega-all" href="#services">Voir tous les services sur l’accueil</a>
+        </div>
+      </div>
+      <a href="#realisations">Réalisations</a><a href="#tarifs">Tarifs</a><a href="#faq">FAQ</a>
       <a class="nav-phone" href="tel:+33771139991">07 71 13 99 91</a>
       <a class="btn" href="#contact" data-magnetic><span class="btn-label">Demander un devis</span></a>
     </nav>
@@ -63,9 +68,9 @@
   <div class="progress" aria-hidden="true"><i class="progress-fill"></i></div>
 </header>
 <div class="mobile-menu" id="menu-mobile" hidden>
-  <a href="#services" data-close>Services</a><a href="#realisations" data-close>Réalisations</a><a href="#tarifs" data-close>Tarifs</a><a href="#faq" data-close>FAQ</a>
-  <a href="/creation-site-web-bourg-en-bresse" data-close>Création de site</a>
-  <a href="/maintenance-site-wordpress-bourg-en-bresse" data-close>Maintenance</a>
+  
+  <div class="mm-group"><span class="mm-label">Services</span><ul><li><a href="/creation-site-web-bourg-en-bresse" data-close>Création de site</a></li><li><a href="/refonte-site-internet-bourg-en-bresse" data-close>Refonte de site</a></li><li><a href="/referencement-seo-bourg-en-bresse" data-close>Référencement SEO</a></li><li><a href="/maintenance-site-wordpress-bourg-en-bresse" data-close>Maintenance</a></li><li><a href="/depannage-site-wordpress-bourg-en-bresse" data-close>Dépannage</a></li></ul></div>
+  <a href="#realisations" data-close>Réalisations</a><a href="#tarifs" data-close>Tarifs</a><a href="#faq" data-close>FAQ</a>
   <div class="mm-foot">
     <span class="muted">Téléphone</span>
     <a href="tel:+33771139991" class="cote">07 71 13 99 91</a>
@@ -172,7 +177,7 @@
       <div class="chantier-text">
         <div class="sec-head" style="margin-bottom:0">
           <span class="eyebrow">Notre méthode</span>
-          <h2 id="methode-titre">Comment se passe votre projet ?</h2>
+          <h2 id="methode-titre">Comment se passe votre <span class="nw">projet ?</span></h2>
           <p class="lead">Quatre étapes pour donner vie à votre site, de la première idée à sa mise en ligne.</p>
         </div>
         <ol class="steps"><li class="step is-active" data-step-i="0"><h3>On commence par votre projet.</h3><div class="step-body"><div><p>Nous échangeons sur vos objectifs, vos besoins et les spécificités de votre activité.</p><span class="step-proof"><span class="check" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3.6 8.4l2.8 2.6L12.4 5"/></svg></span>Un premier échange sans engagement</span></div></div></li><li class="step" data-step-i="1"><h3>On imagine votre futur site.</h3><div class="step-body"><div><p>Nous définissons la structure, les contenus et une direction visuelle adaptée à votre image.</p><span class="step-proof"><span class="check" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3.6 8.4l2.8 2.6L12.4 5"/></svg></span>Vous validez la maquette avant le développement</span></div></div></li><li class="step" data-step-i="2"><h3>Votre site prend forme.</h3><div class="step-body"><div><p>Nous intégrons les contenus et développons un site responsive, rapide et optimisé pour le référencement.</p><span class="step-proof"><span class="check" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3.6 8.4l2.8 2.6L12.4 5"/></svg></span>Testé sur mobile, tablette et ordinateur</span></div></div></li><li class="step" data-step-i="3"><h3>Votre site est prêt.</h3><div class="step-body"><div><p>Après les vérifications finales, votre site est publié. Vous récupérez vos accès et pouvez le faire évoluer.</p><span class="step-proof"><span class="check" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3.6 8.4l2.8 2.6L12.4 5"/></svg></span>Votre site, vos accès, votre autonomie</span></div></div></li></ol>
@@ -246,7 +251,7 @@
       <div class="metiers-head">
         <div class="sec-head" style="margin-bottom:0">
           <span class="eyebrow">Pour qui</span>
-          <h2 id="metiers-titre" data-split>Artisans, commerçants, indépendants : un site à votre image.</h2>
+          <h2 id="metiers-titre" data-split>Artisans, commerçants, <span class="nw">indépendants :</span> un site à votre image.</h2>
         </div>
         <div style="display:grid;gap:12px;justify-items:start">
           <div class="chameleon" data-chameleon><img src="assets/img/mascotte/mascotte-allongee-260.webp" alt="La mascotte caméléon de Skapelys prend la couleur de chaque métier" width="260" height="262" decoding="async" loading="lazy"></div>
@@ -291,24 +296,24 @@
 <rect class="blk" x="20" y="18" width="260" height="22" rx="6" opacity=".95"/><rect class="blk" x="20" y="52" width="150" height="72" rx="8" fill="#ffd23f"/><rect class="blk" x="182" y="52" width="98" height="72" rx="8" fill="#2a6bfa"/>
 <rect class="blk" x="20" y="136" width="80" height="46" rx="8" opacity=".9"/><rect class="blk" x="110" y="136" width="80" height="46" rx="8" opacity=".9"/><rect class="blk" x="200" y="136" width="80" height="46" rx="8" opacity=".9"/></g></svg></div></div></div>
   <div class="service-body"><h3>Création de sites web</h3><p>Des sites modernes, rapides et adaptés à vos objectifs.</p><span class="service-more">En savoir plus <svg class="arrow" viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M4 10h11m-4.5-4.5L15 10l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
-</a><a class="service service--wide" href="https://skapelys.fr/refonte-site-internet-bourg-en-bresse/" target="_blank" rel="noopener" data-tilt data-service="refonte">
+</a><a class="service service--wide" href="/refonte-site-internet-bourg-en-bresse" data-tilt data-service="refonte">
   <div class="service-media"><img src="assets/img/grok/service-refonte-1168.webp" alt="Façade de boutique sous échafaudage, à moitié repeinte en blanc" width="1168" height="784" decoding="async" loading="lazy" srcset="assets/img/grok/service-refonte-760.webp 760w, assets/img/grok/service-refonte-1168.webp 1168w" sizes="(max-width: 680px) 92vw, (max-width: 1080px) 46vw, 33vw"><div class="service-anim"><div class="service-glass"><svg viewBox="0 0 300 200" aria-hidden="true" data-anim="refonte"><defs><clipPath id="rf-clip"><rect class="rf-cut" x="0" y="0" width="150" height="200"/></clipPath></defs>
 <g><rect x="20" y="20" width="260" height="160" rx="10" fill="#d9d4c7"/><rect x="34" y="34" width="120" height="16" fill="#8a8172"/><rect x="34" y="60" width="232" height="56" fill="#b7ae9d"/><rect x="34" y="126" width="70" height="40" fill="#a39a88"/><rect x="114" y="126" width="70" height="40" fill="#a39a88"/><rect x="194" y="126" width="72" height="40" fill="#a39a88"/></g>
 <g clip-path="url(#rf-clip)"><rect x="20" y="20" width="260" height="160" rx="10" fill="#f4f6fa"/><rect x="34" y="34" width="60" height="12" rx="6" fill="#2a6bfa"/><rect x="34" y="58" width="150" height="20" rx="5" fill="#0b1838"/><rect x="34" y="86" width="110" height="8" rx="4" fill="#a9b4cc"/><rect x="34" y="104" width="70" height="20" rx="10" fill="#ffd23f"/><rect x="200" y="56" width="66" height="68" rx="10" fill="#2a6bfa"/><rect x="34" y="136" width="70" height="32" rx="8" fill="#fff" stroke="#d6deec"/><rect x="114" y="136" width="70" height="32" rx="8" fill="#fff" stroke="#d6deec"/><rect x="194" y="136" width="72" height="32" rx="8" fill="#fff" stroke="#d6deec"/></g>
 <g class="rf-handle"><path d="M150 12V188" stroke="#ffd23f" stroke-width="3"/><circle cx="150" cy="100" r="14" fill="#ffd23f"/><path d="M144 95l-5 5 5 5M156 95l5 5-5 5" stroke="#0b1838" stroke-width="2.2" fill="none" stroke-linecap="round"/></g></svg></div></div></div>
-  <div class="service-body"><h3>Refonte de site</h3><p>Nous modernisons votre site pour améliorer son design, ses performances et sa visibilité.</p><span class="service-more">En savoir plus <svg class="arrow" viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M4 10h11m-4.5-4.5L15 10l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="ext-badge">page du site actuel</span></span></div>
-</a><a class="service" href="https://skapelys.fr/referencement-seo-bourg-en-bresse/" target="_blank" rel="noopener" data-tilt data-service="seo">
+  <div class="service-body"><h3>Refonte de site</h3><p>Nous modernisons votre site pour améliorer son design, ses performances et sa visibilité.</p><span class="service-more">En savoir plus <svg class="arrow" viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M4 10h11m-4.5-4.5L15 10l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+</a><a class="service" href="/referencement-seo-bourg-en-bresse" data-tilt data-service="seo">
   <div class="service-media"><img src="assets/img/grok/service-seo-1168.webp" alt="Vue aérienne nocturne d’une petite ville, un seul bâtiment éclairé" width="1168" height="784" decoding="async" loading="lazy" srcset="assets/img/grok/service-seo-760.webp 760w, assets/img/grok/service-seo-1168.webp 1168w" sizes="(max-width: 680px) 92vw, (max-width: 1080px) 46vw, 33vw"><div class="service-anim"><div class="service-glass"><svg viewBox="0 0 300 200" aria-hidden="true" data-anim="seo"><path d="M57 48v128M83 82v26M83 150v26" stroke="#9db8ea" stroke-width="1.5" fill="none" stroke-dasharray="3 4"/><g class="seo-row"><rect x="40" y="26" width="34" height="22" rx="5" fill="#2a6bfa"/><text x="57" y="41.5" font-size="12" font-family="JetBrains Mono, monospace" fill="#fff" text-anchor="middle">H1</text><rect class="seo-bar" x="84" y="32" width="190" height="10" rx="5" fill="#f4f6fa"/></g><g class="seo-row"><rect x="66" y="60" width="34" height="22" rx="5" fill="#2a6bfa"/><text x="83" y="75.5" font-size="12" font-family="JetBrains Mono, monospace" fill="#fff" text-anchor="middle">H2</text><rect class="seo-bar" x="110" y="66" width="150" height="10" rx="5" fill="#f4f6fa"/></g><g class="seo-row"><rect x="92" y="94" width="34" height="22" rx="5" fill="#2a6bfa"/><text x="109" y="109.5" font-size="12" font-family="JetBrains Mono, monospace" fill="#fff" text-anchor="middle">H3</text><rect class="seo-bar" x="136" y="100" width="120" height="10" rx="5" fill="#f4f6fa"/></g><g class="seo-row"><rect x="66" y="128" width="34" height="22" rx="5" fill="#2a6bfa"/><text x="83" y="143.5" font-size="12" font-family="JetBrains Mono, monospace" fill="#fff" text-anchor="middle">H2</text><rect class="seo-bar" x="110" y="134" width="160" height="10" rx="5" fill="#f4f6fa"/></g><g class="seo-row"><rect x="92" y="162" width="34" height="22" rx="5" fill="#2a6bfa"/><text x="109" y="177.5" font-size="12" font-family="JetBrains Mono, monospace" fill="#fff" text-anchor="middle">H3</text><rect class="seo-bar" x="136" y="168" width="110" height="10" rx="5" fill="#f4f6fa"/></g></svg></div></div></div>
-  <div class="service-body"><h3>Référencement naturel</h3><p>Améliorez votre visibilité sur Google et attirez un trafic qualifié.</p><span class="service-more">En savoir plus <svg class="arrow" viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M4 10h11m-4.5-4.5L15 10l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="ext-badge">page du site actuel</span></span></div>
+  <div class="service-body"><h3>Référencement naturel</h3><p>Améliorez votre visibilité sur Google et attirez un trafic qualifié.</p><span class="service-more">En savoir plus <svg class="arrow" viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M4 10h11m-4.5-4.5L15 10l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
 </a><a class="service" href="/maintenance-site-wordpress-bourg-en-bresse" data-tilt data-service="maintenance">
   <div class="service-media"><img src="assets/img/grok/service-maintenance-1168.webp" alt="Mains réglant une roue de vélo sur un pied d’atelier" width="1168" height="784" decoding="async" loading="lazy" srcset="assets/img/grok/service-maintenance-760.webp 760w, assets/img/grok/service-maintenance-1168.webp 1168w" sizes="(max-width: 680px) 92vw, (max-width: 1080px) 46vw, 33vw"><div class="service-anim"><div class="service-glass"><svg viewBox="0 0 300 200" aria-hidden="true" data-anim="maintenance"><g class="mt-row"><text x="24" y="42" font-size="14" font-family="Geist, Arial, sans-serif" fill="#f4f6fa">WordPress</text><rect x="120" y="30" width="130" height="12" rx="6" fill="#1b3b7a"/><rect class="mt-bar" x="120" y="30" width="130" height="12" rx="6" fill="#2ed47a"/><g class="mt-ok"><circle cx="270" cy="36" r="10" fill="#2ed47a"/><path d="M265 36l3.5 3.2 6-6.4" stroke="#0b1838" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g></g><g class="mt-row"><text x="24" y="82" font-size="14" font-family="Geist, Arial, sans-serif" fill="#f4f6fa">Thème</text><rect x="120" y="70" width="130" height="12" rx="6" fill="#1b3b7a"/><rect class="mt-bar" x="120" y="70" width="130" height="12" rx="6" fill="#2ed47a"/><g class="mt-ok"><circle cx="270" cy="76" r="10" fill="#2ed47a"/><path d="M265 76l3.5 3.2 6-6.4" stroke="#0b1838" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g></g><g class="mt-row"><text x="24" y="122" font-size="14" font-family="Geist, Arial, sans-serif" fill="#f4f6fa">Extensions</text><rect x="120" y="110" width="130" height="12" rx="6" fill="#1b3b7a"/><rect class="mt-bar" x="120" y="110" width="130" height="12" rx="6" fill="#2ed47a"/><g class="mt-ok"><circle cx="270" cy="116" r="10" fill="#2ed47a"/><path d="M265 116l3.5 3.2 6-6.4" stroke="#0b1838" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g></g><g class="mt-row"><text x="24" y="162" font-size="14" font-family="Geist, Arial, sans-serif" fill="#f4f6fa">Sauvegarde</text><rect x="120" y="150" width="130" height="12" rx="6" fill="#1b3b7a"/><rect class="mt-bar" x="120" y="150" width="130" height="12" rx="6" fill="#2ed47a"/><g class="mt-ok"><circle cx="270" cy="156" r="10" fill="#2ed47a"/><path d="M265 156l3.5 3.2 6-6.4" stroke="#0b1838" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g></g></svg></div></div></div>
   <div class="service-body"><h3>Maintenance et suivi</h3><p>Nous veillons sur votre site et le faisons évoluer dans la durée.</p><span class="service-more">En savoir plus <svg class="arrow" viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M4 10h11m-4.5-4.5L15 10l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
-</a><a class="service" href="https://skapelys.fr/depannage-site-wordpress-bourg-en-bresse/" target="_blank" rel="noopener" data-tilt data-service="depannage">
+</a><a class="service" href="/depannage-site-wordpress-bourg-en-bresse" data-tilt data-service="depannage">
   <div class="service-media"><img src="assets/img/grok/service-depannage-1168.webp" alt="Main réarmant un disjoncteur à la lampe torche" width="1168" height="784" decoding="async" loading="lazy" srcset="assets/img/grok/service-depannage-760.webp 760w, assets/img/grok/service-depannage-1168.webp 1168w" sizes="(max-width: 680px) 92vw, (max-width: 1080px) 46vw, 33vw"><div class="service-anim"><div class="service-glass"><svg viewBox="0 0 300 200" aria-hidden="true" data-anim="depannage"><rect x="30" y="20" width="240" height="160" rx="12" fill="#f4f6fa"/>
 <g class="gl-ok"><rect x="48" y="40" width="120" height="16" rx="5" fill="#0b1838"/><rect x="48" y="66" width="200" height="8" rx="4" fill="#a9b4cc"/><rect x="48" y="82" width="170" height="8" rx="4" fill="#a9b4cc"/><rect x="48" y="104" width="64" height="22" rx="11" fill="#ffd23f"/><rect x="48" y="140" width="96" height="24" rx="6" fill="#2a6bfa"/><rect x="154" y="140" width="96" height="24" rx="6" fill="#2a6bfa" opacity=".6"/></g>
 <g class="gl-bad" opacity="0"><rect x="30" y="64" width="240" height="14" fill="#ff6b5a" opacity=".85"/><rect x="58" y="96" width="210" height="8" fill="#0b1838"/><rect x="30" y="126" width="140" height="18" fill="#2ed47a" opacity=".7"/><text x="150" y="60" font-size="13" font-family="JetBrains Mono, monospace" fill="#b42318" text-anchor="middle">Erreur critique</text></g>
 <g class="gl-fixed" opacity="0"><circle cx="250" cy="40" r="13" fill="#2ed47a"/><path d="M244 40l4 3.6 7-7" stroke="#0b1838" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g></svg></div></div></div>
-  <div class="service-body"><h3>Dépannage</h3><p>Page blanche, erreur critique ou site piraté : intervention rapide pour remettre votre site en ligne.</p><span class="service-more">En savoir plus <svg class="arrow" viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M4 10h11m-4.5-4.5L15 10l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="ext-badge">page du site actuel</span></span></div>
+  <div class="service-body"><h3>Dépannage</h3><p>Page blanche, erreur critique ou site piraté : intervention rapide pour remettre votre site en ligne.</p><span class="service-more">En savoir plus <svg class="arrow" viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M4 10h11m-4.5-4.5L15 10l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
 </a></div>
   </div>
 </section><section class="band band--nuit realisations" id="realisations" aria-labelledby="real-titre" data-real-section>
@@ -352,7 +357,7 @@
   </div>
 </section><section class="band band--plan pourquoi" id="pourquoi" aria-labelledby="pourquoi-titre">
   <div class="wrap">
-    <div class="sec-head"><span class="eyebrow">Pourquoi Skapelys</span><h2 id="pourquoi-titre" data-split>Pourquoi choisir Skapelys pour votre site ?</h2></div>
+    <div class="sec-head"><span class="eyebrow">Pourquoi Skapelys</span><h2 id="pourquoi-titre" data-split>Pourquoi choisir Skapelys pour votre <span class="nw">site ?</span></h2></div>
     <div class="bento">
       <article class="tile tile--map">
         <h3>Une agence locale, à Bourg-en-Bresse.</h3>
@@ -406,7 +411,7 @@
     <div class="sec-head sec-head--split">
       <div style="display:grid;gap:18px">
         <span class="eyebrow">Nos tarifs</span>
-        <h2 id="tarifs-titre" data-split>Combien coûte votre site internet ?</h2>
+        <h2 id="tarifs-titre" data-split>Combien coûte votre site <span class="nw">internet ?</span></h2>
       </div>
       <p class="lead">Des prix fixes, annoncés dès le départ et sans frais cachés.</p>
     </div>
@@ -477,7 +482,7 @@
     <form class="quiz" data-quiz aria-labelledby="quiz-titre" onsubmit="return false">
       <div class="quiz-bg" aria-hidden="true"><img src="assets/img/grok/accueil-tarifs-matiere-1168.webp" alt="" width="1168" height="784" decoding="async" loading="lazy" srcset="assets/img/grok/accueil-tarifs-matiere-760.webp 760w, assets/img/grok/accueil-tarifs-matiere-1168.webp 1168w" sizes="(max-width: 900px) 100vw, 60vw"></div>
       <div class="quiz-qs">
-        <div style="display:grid;gap:10px"><h3 id="quiz-titre">Quelle formule pour vous ?</h3><p class="muted">Trois questions, la réponse s’affiche aussitôt.</p></div>
+        <div style="display:grid;gap:10px"><h3 id="quiz-titre">Quelle formule pour <span class="nw">vous ?</span></h3><p class="muted">Trois questions, la réponse s’affiche aussitôt.</p></div>
         <fieldset><legend>Combien de pages vous faut-il ?</legend><div class="chips">
           <label class="chip"><input type="radio" name="q-pages" id="q-pages-1" value="1" checked><span>Une seule page me suffit</span></label>
           <label class="chip"><input type="radio" name="q-pages" id="q-pages-n" value="n"><span>Plusieurs services à détailler</span></label></div></fieldset>
@@ -529,7 +534,7 @@
     <div class="zone-copy">
       <div class="sec-head" style="margin-bottom:0"><span class="eyebrow">Votre agence web</span><h2 id="zone-titre" data-split>Agence web à <span class="nw">Bourg-en-Bresse</span> : des sites rapides et visibles sur Google.</h2></div>
       <div class="prose">
-        <p>Skapelys s’occupe de la <a href="/creation-site-web-bourg-en-bresse">création de site internet</a>, vitrine ou sur mesure, et de la <a href="https://skapelys.fr/refonte-site-internet-bourg-en-bresse/">refonte de sites</a>, avec le <a href="https://skapelys.fr/referencement-seo-bourg-en-bresse/">référencement</a> et la <a href="/maintenance-site-wordpress-bourg-en-bresse">maintenance</a> qui vont avec.</p>
+        <p>Skapelys s’occupe de la <a href="/creation-site-web-bourg-en-bresse">création de site internet</a>, vitrine ou sur mesure, et de la <a href="/refonte-site-internet-bourg-en-bresse">refonte de sites</a>, avec le <a href="/referencement-seo-bourg-en-bresse">référencement</a> et la <a href="/maintenance-site-wordpress-bourg-en-bresse">maintenance</a> qui vont avec.</p>
         <p>Nous sommes installés à Bourg-en-Bresse, dans l’Ain, et accompagnons aussi les entreprises de Viriat, Péronnas, Montagnat, Saint-Denis-lès-Bourg, Jasseron et Saint-Just. Nous travaillons également à distance avec des clients partout en France : un appel, un échange de messages, et votre projet avance, où que vous soyez.</p>
       </div>
       <ul class="towns" aria-label="Communes de la zone d’intervention"><li>Bourg-en-Bresse</li><li>Viriat</li><li>Péronnas</li><li>Montagnat</li><li>Saint-Denis-lès-Bourg</li><li>Jasseron</li><li>Saint-Just</li></ul>
@@ -575,7 +580,7 @@
         <span class="note">Calcul indicatif : jours ouvrés, hors week-ends et jours fériés.</span>
       </div>
       <div style="display:grid;gap:14px">
-        <h3>Et ensuite ?</h3>
+        <h3>Et <span class="nw">ensuite ?</span></h3>
         <ol class="next-steps">
           <li><span>Nous vous répondons sous <strong>24 heures ouvrées</strong>.</span></li>
           <li><span>Un premier échange <strong>gratuit, sans engagement</strong>.</span></li>
@@ -608,7 +613,7 @@
           <div class="field" data-req><label for="f-nom">Nom *</label><input id="f-nom" name="nom" type="text" required autocomplete="name"><span class="err" aria-live="polite"></span></div>
           <div class="field" data-req><label for="f-email">Email *</label><input id="f-email" name="email" type="email" required autocomplete="email" inputmode="email"><span class="err" aria-live="polite"></span></div>
           <div class="field"><label for="f-tel">Téléphone <span class="opt">(facultatif)</span></label><input id="f-tel" name="tel" type="tel" autocomplete="tel" inputmode="tel"></div>
-          <div class="field" data-req data-consent><label class="consent" for="f-consent"><input id="f-consent" name="consent" type="checkbox" required><span>J’accepte que mes informations soient utilisées pour me recontacter au sujet de ma demande. Voir la <a href="https://skapelys.fr/politique-de-confidentialite/" target="_blank" rel="noopener">politique de confidentialité</a>. *</span></label><span class="err" aria-live="polite"></span></div>
+          <div class="field" data-req data-consent><label class="consent" for="f-consent"><input id="f-consent" name="consent" type="checkbox" required><span>J’accepte que mes informations soient utilisées pour me recontacter au sujet de ma demande. Voir la <a href="/politique-de-confidentialite">politique de confidentialité</a>. *</span></label><span class="err" aria-live="polite"></span></div>
         </fieldset>
         <div class="form-nav">
           <button class="btn btn--line on-light" type="button" data-prev hidden><span class="btn-label">Retour</span></button>
@@ -640,10 +645,10 @@
         <h2 class="footer-h">Services</h2>
         <ul>
           <li><a href="/creation-site-web-bourg-en-bresse">Création de site</a></li>
-          <li><a href="https://skapelys.fr/refonte-site-internet-bourg-en-bresse/" class="ext">Refonte de site</a></li>
-          <li><a href="https://skapelys.fr/referencement-seo-bourg-en-bresse/" class="ext">Référencement SEO</a></li>
+          <li><a href="/refonte-site-internet-bourg-en-bresse">Refonte de site</a></li>
+          <li><a href="/referencement-seo-bourg-en-bresse">Référencement SEO</a></li>
           <li><a href="/maintenance-site-wordpress-bourg-en-bresse">Maintenance</a></li>
-          <li><a href="https://skapelys.fr/depannage-site-wordpress-bourg-en-bresse/" class="ext">Dépannage</a></li>
+          <li><a href="/depannage-site-wordpress-bourg-en-bresse">Dépannage</a></li>
         </ul>
       </div>
       <div>
@@ -658,8 +663,8 @@
       <div>
         <h2 class="footer-h">Informations</h2>
         <ul>
-          <li><a href="https://skapelys.fr/mentions-legales/" class="ext">Mentions légales</a></li>
-          <li><a href="https://skapelys.fr/politique-de-confidentialite/" class="ext">Politique de confidentialité</a></li>
+          <li><a href="/mentions-legales">Mentions légales</a></li>
+          <li><a href="/politique-de-confidentialite">Politique de confidentialité</a></li>
         </ul>
       </div>
     </div>

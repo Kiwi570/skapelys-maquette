@@ -29,7 +29,7 @@
 <link rel="preload" href="assets/fonts/unbounded.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
 <style>html,body{background:#071433}</style>
-<link rel="stylesheet" href="assets/css/site.css?v=3">
+<link rel="stylesheet" href="assets/css/site.css?v=4">
 <script>
 (function(){var d=document.documentElement;d.classList.remove('no-js');d.classList.add('js','intro');var m='';try{m=localStorage.getItem('sk-motion')||''}catch(e){}var r=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;if(m==='reduce'||(r&&m!=='full')){d.classList.add('motion-reduce');d.classList.remove('intro')}else if(m==='full'){d.classList.add('motion-full')}setTimeout(function(){d.classList.remove('intro')},2900)})();
 </script>
@@ -37,11 +37,11 @@
 <script defer src="assets/vendor/gsap/gsap.min.js"></script>
 <script defer src="assets/vendor/gsap/ScrollTrigger.min.js"></script>
 <script defer src="assets/vendor/gsap/SplitText.min.js"></script>
-<link rel="modulepreload" href="assets/js/main.js?v=3">
-<link rel="modulepreload" href="assets/js/modules/core.js?v=3">
-<link rel="modulepreload" href="assets/js/modules/sections.js?v=3">
-<link rel="modulepreload" href="assets/js/modules/deadline.js?v=3">
-<script type="module" src="assets/js/main.js?v=3"></script>
+<link rel="modulepreload" href="assets/js/main.js?v=4">
+<link rel="modulepreload" href="assets/js/modules/core.js?v=4">
+<link rel="modulepreload" href="assets/js/modules/sections.js?v=4">
+<link rel="modulepreload" href="assets/js/modules/deadline.js?v=4">
+<script type="module" src="assets/js/main.js?v=4"></script>
 </head>
 <body data-page="creation">
 <a class="skip" href="#contenu">Aller au contenu</a>
@@ -52,9 +52,14 @@
       <img src="assets/img/marque/logo-blanc.webp" alt="Skapelys" width="388" height="147" decoding="async" fetchpriority="high">
     </a>
     <nav class="nav" aria-label="Navigation principale">
-      <a href="/#services">Services</a><a href="/#realisations">Réalisations</a><a href="/#tarifs">Tarifs</a><a href="#faq">FAQ</a>
-      <a href="/creation-site-web-bourg-en-bresse" aria-current="page">Création</a>
-      <a href="/maintenance-site-wordpress-bourg-en-bresse">Maintenance</a>
+      <div class="nav-item">
+        <button class="nav-trigger is-current" type="button" aria-expanded="false" aria-controls="menu-services">Services<svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M2.5 4.5L6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="mega" id="menu-services" hidden>
+          <ul class="mega-list"><li><a class="mega-item" href="/creation-site-web-bourg-en-bresse" aria-current="page"><span class="mega-thumb"><img src="assets/img/grok/service-creation-760.webp" alt="" width="160" height="107" loading="lazy" decoding="async"></span><span class="mega-txt"><strong>Création de site</strong><span>Vitrine dès 690 €, sur mesure dès 990 €</span></span></a></li><li><a class="mega-item" href="/refonte-site-internet-bourg-en-bresse"><span class="mega-thumb"><img src="assets/img/grok/service-refonte-760.webp" alt="" width="160" height="107" loading="lazy" decoding="async"></span><span class="mega-txt"><strong>Refonte de site</strong><span>Remettre à neuf sans perdre son référencement</span></span></a></li><li><a class="mega-item" href="/referencement-seo-bourg-en-bresse"><span class="mega-thumb"><img src="assets/img/grok/service-seo-760.webp" alt="" width="160" height="107" loading="lazy" decoding="async"></span><span class="mega-txt"><strong>Référencement SEO</strong><span>Monter dans les résultats de Google</span></span></a></li><li><a class="mega-item" href="/maintenance-site-wordpress-bourg-en-bresse"><span class="mega-thumb"><img src="assets/img/grok/service-maintenance-760.webp" alt="" width="160" height="107" loading="lazy" decoding="async"></span><span class="mega-txt"><strong>Maintenance</strong><span>Mises à jour et sauvegardes, 50 € par mois</span></span></a></li><li><a class="mega-item" href="/depannage-site-wordpress-bourg-en-bresse"><span class="mega-thumb"><img src="assets/img/grok/service-depannage-760.webp" alt="" width="160" height="107" loading="lazy" decoding="async"></span><span class="mega-txt"><strong>Dépannage</strong><span>Page blanche, erreur, site piraté</span></span></a></li></ul>
+          <a class="mega-all" href="/#services">Voir tous les services sur l’accueil</a>
+        </div>
+      </div>
+      <a href="/#realisations">Réalisations</a><a href="/#tarifs">Tarifs</a><a href="#faq">FAQ</a>
       <a class="nav-phone" href="tel:+33771139991">07 71 13 99 91</a>
       <a class="btn" href="#contact" data-magnetic><span class="btn-label">Demander un devis</span></a>
     </nav>
@@ -63,9 +68,9 @@
   <div class="progress" aria-hidden="true"><i class="progress-fill"></i></div>
 </header>
 <div class="mobile-menu" id="menu-mobile" hidden>
-  <a href="/#services" data-close>Services</a><a href="/#realisations" data-close>Réalisations</a><a href="/#tarifs" data-close>Tarifs</a><a href="#faq" data-close>FAQ</a>
-  <a href="/creation-site-web-bourg-en-bresse" data-close>Création de site</a>
-  <a href="/maintenance-site-wordpress-bourg-en-bresse" data-close>Maintenance</a>
+  <a href="/" data-close>Accueil</a>
+  <div class="mm-group"><span class="mm-label">Services</span><ul><li><a href="/creation-site-web-bourg-en-bresse" data-close aria-current="page">Création de site</a></li><li><a href="/refonte-site-internet-bourg-en-bresse" data-close>Refonte de site</a></li><li><a href="/referencement-seo-bourg-en-bresse" data-close>Référencement SEO</a></li><li><a href="/maintenance-site-wordpress-bourg-en-bresse" data-close>Maintenance</a></li><li><a href="/depannage-site-wordpress-bourg-en-bresse" data-close>Dépannage</a></li></ul></div>
+  <a href="/#realisations" data-close>Réalisations</a><a href="/#tarifs" data-close>Tarifs</a><a href="#faq" data-close>FAQ</a>
   <div class="mm-foot">
     <span class="muted">Téléphone</span>
     <a href="tel:+33771139991" class="cote">07 71 13 99 91</a>
@@ -115,7 +120,7 @@
       <div class="prose">
         <p>Vous lancez votre activité, vous n’avez pas encore de site, ou celui que vous avez ne vous amène aucun client ? Skapelys crée les sites internet des artisans, commerçants, indépendants et petites entreprises de Bourg-en-Bresse et de l’Ain.</p>
         <p>Chaque site est construit pour votre métier : une maquette que vous validez avant le développement, un site rapide et adapté à tous les écrans (ordinateur, tablette, mobile), et un référencement de base travaillé dès la création pour vous aider à être trouvé sur Google.</p>
-        <p>Vous avez déjà un site qui a vieilli ? Voyez la <a href="https://skapelys.fr/refonte-site-internet-bourg-en-bresse/">refonte de site internet</a>. Vous voulez être mieux placé sur Google ? Voyez notre accompagnement en <a href="https://skapelys.fr/referencement-seo-bourg-en-bresse/">référencement SEO</a>.</p>
+        <p>Vous avez déjà un site qui a vieilli ? Voyez la <a href="/refonte-site-internet-bourg-en-bresse">refonte de site internet</a>. Vous voulez être mieux placé sur Google ? Voyez notre accompagnement en <a href="/referencement-seo-bourg-en-bresse">référencement SEO</a>.</p>
       </div>
     </div>
     <div class="cles-visual" style="min-height:0">
@@ -132,7 +137,7 @@
 </section>
 <section class="band band--blanc" id="choisir" aria-labelledby="choix-titre">
   <div class="wrap">
-    <div class="sec-head"><span class="eyebrow">Quelle formule ?</span><h2 id="choix-titre" data-split>Site vitrine ou site sur mesure : lequel choisir ?</h2></div>
+    <div class="sec-head"><span class="eyebrow">Quelle formule ?</span><h2 id="choix-titre" data-split>Site vitrine ou site sur <span class="nw">mesure :</span> lequel <span class="nw">choisir ?</span></h2></div>
     <div class="choice-grid">
       <article class="choice" data-tilt>
         <div class="media" data-parallax><img src="assets/img/grok/creation-vitrine-784.webp" alt="Petite vitrine éclairée la nuit dans une rue déserte" width="784" height="1168" decoding="async" loading="lazy" srcset="assets/img/grok/creation-vitrine-480.webp 480w, assets/img/grok/creation-vitrine-784.webp 784w" sizes="(max-width: 680px) 92vw, 46vw"></div>
@@ -165,7 +170,7 @@
       <div class="chantier-text">
         <div class="sec-head" style="margin-bottom:0">
           <span class="eyebrow">Notre méthode</span>
-          <h2 id="methode-titre">Comment se passe votre projet ?</h2>
+          <h2 id="methode-titre">Comment se passe votre <span class="nw">projet ?</span></h2>
           <p class="lead">Quatre étapes pour donner vie à votre site, de la première idée à sa mise en ligne.</p>
         </div>
         <ol class="steps"><li class="step is-active" data-step-i="0"><h3>On commence par votre projet.</h3><div class="step-body"><div><p>Nous échangeons sur vos objectifs, vos besoins et les spécificités de votre activité.</p><span class="step-proof"><span class="check" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3.6 8.4l2.8 2.6L12.4 5"/></svg></span>Un premier échange sans engagement</span></div></div></li><li class="step" data-step-i="1"><h3>On imagine votre futur site.</h3><div class="step-body"><div><p>Nous définissons la structure, les contenus et une direction visuelle adaptée à votre image.</p><span class="step-proof"><span class="check" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3.6 8.4l2.8 2.6L12.4 5"/></svg></span>Vous validez la maquette avant le développement</span></div></div></li><li class="step" data-step-i="2"><h3>Votre site prend forme.</h3><div class="step-body"><div><p>Nous intégrons les contenus et développons un site responsive, rapide et optimisé pour le référencement.</p><span class="step-proof"><span class="check" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3.6 8.4l2.8 2.6L12.4 5"/></svg></span>Testé sur mobile, tablette et ordinateur</span></div></div></li><li class="step" data-step-i="3"><h3>Votre site est prêt.</h3><div class="step-body"><div><p>Après les vérifications finales, votre site est publié. Vous récupérez vos accès et pouvez le faire évoluer.</p><span class="step-proof"><span class="check" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3.6 8.4l2.8 2.6L12.4 5"/></svg></span>Votre site, vos accès, votre autonomie</span></div></div></li></ol>
@@ -238,7 +243,7 @@
     <div class="sec-head sec-head--split">
       <div style="display:grid;gap:18px">
         <span class="eyebrow">Nos tarifs</span>
-        <h2 id="tarifs-titre" data-split>Combien coûte votre site internet ?</h2>
+        <h2 id="tarifs-titre" data-split>Combien coûte votre site <span class="nw">internet ?</span></h2>
       </div>
       <p class="lead">Des prix fixes, annoncés dès le départ et sans frais cachés.</p>
     </div>
@@ -309,7 +314,7 @@
     <form class="quiz" data-quiz aria-labelledby="quiz-titre" onsubmit="return false">
       <div class="quiz-bg" aria-hidden="true"><img src="assets/img/grok/accueil-tarifs-matiere-1168.webp" alt="" width="1168" height="784" decoding="async" loading="lazy" srcset="assets/img/grok/accueil-tarifs-matiere-760.webp 760w, assets/img/grok/accueil-tarifs-matiere-1168.webp 1168w" sizes="(max-width: 900px) 100vw, 60vw"></div>
       <div class="quiz-qs">
-        <div style="display:grid;gap:10px"><h3 id="quiz-titre">Quelle formule pour vous ?</h3><p class="muted">Trois questions, la réponse s’affiche aussitôt.</p></div>
+        <div style="display:grid;gap:10px"><h3 id="quiz-titre">Quelle formule pour <span class="nw">vous ?</span></h3><p class="muted">Trois questions, la réponse s’affiche aussitôt.</p></div>
         <fieldset><legend>Combien de pages vous faut-il ?</legend><div class="chips">
           <label class="chip"><input type="radio" name="q-pages" id="q-pages-1" value="1" checked><span>Une seule page me suffit</span></label>
           <label class="chip"><input type="radio" name="q-pages" id="q-pages-n" value="n"><span>Plusieurs services à détailler</span></label></div></fieldset>
@@ -404,7 +409,7 @@
       </div>
       <div class="faq-mascot" data-float><img src="assets/img/mascotte/mascotte-pouce-300.webp" alt="La mascotte caméléon de Skapelys fait signe" width="303" height="427" decoding="async" loading="lazy"></div>
     </div>
-    <div class="faq-list"><details class="qa"><summary><span>Combien coûte la création d’un site internet à Bourg-en-Bresse ?</span><span class="pm" aria-hidden="true"></span></summary><div class="answer"><p>690 € pour un site vitrine une page, à partir de 990 € pour un site sur mesure. Le devis est gratuit et le prix est fixé avant le début du projet : pas de surprise en cours de route. La maintenance est en option, à 50 € par mois.</p></div></details><details class="qa"><summary><span>Combien de temps faut-il pour créer mon site ?</span><span class="pm" aria-hidden="true"></span></summary><div class="answer"><p>Pour un site vitrine une page, comptez 5 jours ouvrés après réception de vos textes et de vos photos. Pour un site sur mesure, comptez en général 2 à 3 semaines selon le nombre de pages et les fonctions : nous vous donnons une date précise dès le premier échange.</p></div></details><details class="qa"><summary><span>Site vitrine ou site sur mesure : comment choisir ?</span><span class="pm" aria-hidden="true"></span></summary><div class="answer"><p>Le site vitrine une page suffit pour présenter votre activité et être contacté. Le site sur mesure convient si vous avez plusieurs services à détailler, beaucoup de contenu, ou besoin de fonctions comme la réservation ou le paiement en ligne. En cas de doute, nous vous conseillons lors du premier échange.</p></div></details><details class="qa"><summary><span>Mon site sera-t-il visible sur Google ?</span><span class="pm" aria-hidden="true"></span></summary><div class="answer"><p>Le référencement de base est inclus dans toutes les formules : structure optimisée, temps de chargement et balises travaillées dès la création. La formule Sur Mesure ajoute la création de votre fiche Google Business Profile. Pour aller plus loin, voyez notre accompagnement en <a href="https://skapelys.fr/referencement-seo-bourg-en-bresse/">référencement SEO</a>.</p></div></details><details class="qa"><summary><span>Suis-je propriétaire de mon site et de mon nom de domaine ?</span><span class="pm" aria-hidden="true"></span></summary><div class="answer"><p>Oui. Le site, le nom de domaine et l’hébergement sont à votre nom. À la livraison, vous recevez tous les accès et vous restez libre de faire évoluer le site, avec nous ou sans nous.</p></div></details><details class="qa"><summary><span>Pourrai-je modifier mon site moi-même ?</span><span class="pm" aria-hidden="true"></span></summary><div class="answer"><p>Oui. Le site est livré sur WordPress, avec un espace d’administration simple pour changer vos textes, vos photos ou vos horaires.</p></div></details><details class="qa"><summary><span>La maintenance est-elle obligatoire ?</span><span class="pm" aria-hidden="true"></span></summary><div class="answer"><p>Non. Elle est proposée en option, à 50 € par mois : mises à jour, sauvegardes et intervention en cas de bug. Vous pouvez aussi gérer votre site vous-même. Le détail est sur la page <a href="/maintenance-site-wordpress-bourg-en-bresse">maintenance de site</a>.</p></div></details><details class="qa"><summary><span>Travaillez-vous en dehors de Bourg-en-Bresse ?</span><span class="pm" aria-hidden="true"></span></summary><div class="answer"><p>Oui. Nous intervenons à Bourg-en-Bresse et dans tout l’Ain, à Viriat, Péronnas, Montagnat, Saint-Denis-lès-Bourg, Jasseron ou Saint-Just, en rendez-vous comme à distance, et avec des clients partout en France.</p></div></details>
+    <div class="faq-list"><details class="qa"><summary><span>Combien coûte la création d’un site internet à Bourg-en-Bresse ?</span><span class="pm" aria-hidden="true"></span></summary><div class="answer"><p>690 € pour un site vitrine une page, à partir de 990 € pour un site sur mesure. Le devis est gratuit et le prix est fixé avant le début du projet : pas de surprise en cours de route. La maintenance est en option, à 50 € par mois.</p></div></details><details class="qa"><summary><span>Combien de temps faut-il pour créer mon site ?</span><span class="pm" aria-hidden="true"></span></summary><div class="answer"><p>Pour un site vitrine une page, comptez 5 jours ouvrés après réception de vos textes et de vos photos. Pour un site sur mesure, comptez en général 2 à 3 semaines selon le nombre de pages et les fonctions : nous vous donnons une date précise dès le premier échange.</p></div></details><details class="qa"><summary><span>Site vitrine ou site sur mesure : comment choisir ?</span><span class="pm" aria-hidden="true"></span></summary><div class="answer"><p>Le site vitrine une page suffit pour présenter votre activité et être contacté. Le site sur mesure convient si vous avez plusieurs services à détailler, beaucoup de contenu, ou besoin de fonctions comme la réservation ou le paiement en ligne. En cas de doute, nous vous conseillons lors du premier échange.</p></div></details><details class="qa"><summary><span>Mon site sera-t-il visible sur Google ?</span><span class="pm" aria-hidden="true"></span></summary><div class="answer"><p>Le référencement de base est inclus dans toutes les formules : structure optimisée, temps de chargement et balises travaillées dès la création. La formule Sur Mesure ajoute la création de votre fiche Google Business Profile. Pour aller plus loin, voyez notre accompagnement en <a href="/referencement-seo-bourg-en-bresse">référencement SEO</a>.</p></div></details><details class="qa"><summary><span>Suis-je propriétaire de mon site et de mon nom de domaine ?</span><span class="pm" aria-hidden="true"></span></summary><div class="answer"><p>Oui. Le site, le nom de domaine et l’hébergement sont à votre nom. À la livraison, vous recevez tous les accès et vous restez libre de faire évoluer le site, avec nous ou sans nous.</p></div></details><details class="qa"><summary><span>Pourrai-je modifier mon site moi-même ?</span><span class="pm" aria-hidden="true"></span></summary><div class="answer"><p>Oui. Le site est livré sur WordPress, avec un espace d’administration simple pour changer vos textes, vos photos ou vos horaires.</p></div></details><details class="qa"><summary><span>La maintenance est-elle obligatoire ?</span><span class="pm" aria-hidden="true"></span></summary><div class="answer"><p>Non. Elle est proposée en option, à 50 € par mois : mises à jour, sauvegardes et intervention en cas de bug. Vous pouvez aussi gérer votre site vous-même. Le détail est sur la page <a href="/maintenance-site-wordpress-bourg-en-bresse">maintenance de site</a>.</p></div></details><details class="qa"><summary><span>Travaillez-vous en dehors de Bourg-en-Bresse ?</span><span class="pm" aria-hidden="true"></span></summary><div class="answer"><p>Oui. Nous intervenons à Bourg-en-Bresse et dans tout l’Ain, à Viriat, Péronnas, Montagnat, Saint-Denis-lès-Bourg, Jasseron ou Saint-Just, en rendez-vous comme à distance, et avec des clients partout en France.</p></div></details>
       <div class="faq-cta"><p><strong>Une autre question ?</strong> Posez-la directement, réponse sous 24 h ouvrées.</p><div class="btn-row"><a class="btn btn--ink" href="#contact"><span class="btn-label">Poser ma question</span></a><span class="phone-inline"><span class="muted">ou appelez le</span><strong>07 71 13 99 91</strong></span></div></div>
     </div>
   </div>
@@ -430,7 +435,7 @@
         <span class="note">Calcul indicatif : jours ouvrés, hors week-ends et jours fériés.</span>
       </div>
       <div style="display:grid;gap:14px">
-        <h3>Et ensuite ?</h3>
+        <h3>Et <span class="nw">ensuite ?</span></h3>
         <ol class="next-steps">
           <li><span>Nous vous répondons sous <strong>24 heures ouvrées</strong>.</span></li>
           <li><span>Un premier échange <strong>gratuit, sans engagement</strong>.</span></li>
@@ -463,7 +468,7 @@
           <div class="field" data-req><label for="f-nom">Nom *</label><input id="f-nom" name="nom" type="text" required autocomplete="name"><span class="err" aria-live="polite"></span></div>
           <div class="field" data-req><label for="f-email">Email *</label><input id="f-email" name="email" type="email" required autocomplete="email" inputmode="email"><span class="err" aria-live="polite"></span></div>
           <div class="field"><label for="f-tel">Téléphone <span class="opt">(facultatif)</span></label><input id="f-tel" name="tel" type="tel" autocomplete="tel" inputmode="tel"></div>
-          <div class="field" data-req data-consent><label class="consent" for="f-consent"><input id="f-consent" name="consent" type="checkbox" required><span>J’accepte que mes informations soient utilisées pour me recontacter au sujet de ma demande. Voir la <a href="https://skapelys.fr/politique-de-confidentialite/" target="_blank" rel="noopener">politique de confidentialité</a>. *</span></label><span class="err" aria-live="polite"></span></div>
+          <div class="field" data-req data-consent><label class="consent" for="f-consent"><input id="f-consent" name="consent" type="checkbox" required><span>J’accepte que mes informations soient utilisées pour me recontacter au sujet de ma demande. Voir la <a href="/politique-de-confidentialite">politique de confidentialité</a>. *</span></label><span class="err" aria-live="polite"></span></div>
         </fieldset>
         <div class="form-nav">
           <button class="btn btn--line on-light" type="button" data-prev hidden><span class="btn-label">Retour</span></button>
@@ -495,10 +500,10 @@
         <h2 class="footer-h">Services</h2>
         <ul>
           <li><a href="/creation-site-web-bourg-en-bresse">Création de site</a></li>
-          <li><a href="https://skapelys.fr/refonte-site-internet-bourg-en-bresse/" class="ext">Refonte de site</a></li>
-          <li><a href="https://skapelys.fr/referencement-seo-bourg-en-bresse/" class="ext">Référencement SEO</a></li>
+          <li><a href="/refonte-site-internet-bourg-en-bresse">Refonte de site</a></li>
+          <li><a href="/referencement-seo-bourg-en-bresse">Référencement SEO</a></li>
           <li><a href="/maintenance-site-wordpress-bourg-en-bresse">Maintenance</a></li>
-          <li><a href="https://skapelys.fr/depannage-site-wordpress-bourg-en-bresse/" class="ext">Dépannage</a></li>
+          <li><a href="/depannage-site-wordpress-bourg-en-bresse">Dépannage</a></li>
         </ul>
       </div>
       <div>
@@ -513,8 +518,8 @@
       <div>
         <h2 class="footer-h">Informations</h2>
         <ul>
-          <li><a href="https://skapelys.fr/mentions-legales/" class="ext">Mentions légales</a></li>
-          <li><a href="https://skapelys.fr/politique-de-confidentialite/" class="ext">Politique de confidentialité</a></li>
+          <li><a href="/mentions-legales">Mentions légales</a></li>
+          <li><a href="/politique-de-confidentialite">Politique de confidentialité</a></li>
         </ul>
       </div>
     </div>

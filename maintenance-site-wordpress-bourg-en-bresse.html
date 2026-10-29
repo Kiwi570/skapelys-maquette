@@ -29,7 +29,7 @@
 <link rel="preload" href="assets/fonts/unbounded.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
 <style>html,body{background:#071433}</style>
-<link rel="stylesheet" href="assets/css/site.css?v=3">
+<link rel="stylesheet" href="assets/css/site.css?v=4">
 <script>
 (function(){var d=document.documentElement;d.classList.remove('no-js');d.classList.add('js','intro');var m='';try{m=localStorage.getItem('sk-motion')||''}catch(e){}var r=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;if(m==='reduce'||(r&&m!=='full')){d.classList.add('motion-reduce');d.classList.remove('intro')}else if(m==='full'){d.classList.add('motion-full')}setTimeout(function(){d.classList.remove('intro')},2900)})();
 </script>
@@ -37,11 +37,11 @@
 <script defer src="assets/vendor/gsap/gsap.min.js"></script>
 <script defer src="assets/vendor/gsap/ScrollTrigger.min.js"></script>
 <script defer src="assets/vendor/gsap/SplitText.min.js"></script>
-<link rel="modulepreload" href="assets/js/main.js?v=3">
-<link rel="modulepreload" href="assets/js/modules/core.js?v=3">
-<link rel="modulepreload" href="assets/js/modules/sections.js?v=3">
-<link rel="modulepreload" href="assets/js/modules/deadline.js?v=3">
-<script type="module" src="assets/js/main.js?v=3"></script>
+<link rel="modulepreload" href="assets/js/main.js?v=4">
+<link rel="modulepreload" href="assets/js/modules/core.js?v=4">
+<link rel="modulepreload" href="assets/js/modules/sections.js?v=4">
+<link rel="modulepreload" href="assets/js/modules/deadline.js?v=4">
+<script type="module" src="assets/js/main.js?v=4"></script>
 </head>
 <body data-page="maintenance">
 <a class="skip" href="#contenu">Aller au contenu</a>
@@ -52,9 +52,14 @@
       <img src="assets/img/marque/logo-blanc.webp" alt="Skapelys" width="388" height="147" decoding="async" fetchpriority="high">
     </a>
     <nav class="nav" aria-label="Navigation principale">
-      <a href="/#services">Services</a><a href="/#realisations">Réalisations</a><a href="/#tarifs">Tarifs</a><a href="#faq">FAQ</a>
-      <a href="/creation-site-web-bourg-en-bresse">Création</a>
-      <a href="/maintenance-site-wordpress-bourg-en-bresse" aria-current="page">Maintenance</a>
+      <div class="nav-item">
+        <button class="nav-trigger is-current" type="button" aria-expanded="false" aria-controls="menu-services">Services<svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M2.5 4.5L6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="mega" id="menu-services" hidden>
+          <ul class="mega-list"><li><a class="mega-item" href="/creation-site-web-bourg-en-bresse"><span class="mega-thumb"><img src="assets/img/grok/service-creation-760.webp" alt="" width="160" height="107" loading="lazy" decoding="async"></span><span class="mega-txt"><strong>Création de site</strong><span>Vitrine dès 690 €, sur mesure dès 990 €</span></span></a></li><li><a class="mega-item" href="/refonte-site-internet-bourg-en-bresse"><span class="mega-thumb"><img src="assets/img/grok/service-refonte-760.webp" alt="" width="160" height="107" loading="lazy" decoding="async"></span><span class="mega-txt"><strong>Refonte de site</strong><span>Remettre à neuf sans perdre son référencement</span></span></a></li><li><a class="mega-item" href="/referencement-seo-bourg-en-bresse"><span class="mega-thumb"><img src="assets/img/grok/service-seo-760.webp" alt="" width="160" height="107" loading="lazy" decoding="async"></span><span class="mega-txt"><strong>Référencement SEO</strong><span>Monter dans les résultats de Google</span></span></a></li><li><a class="mega-item" href="/maintenance-site-wordpress-bourg-en-bresse" aria-current="page"><span class="mega-thumb"><img src="assets/img/grok/service-maintenance-760.webp" alt="" width="160" height="107" loading="lazy" decoding="async"></span><span class="mega-txt"><strong>Maintenance</strong><span>Mises à jour et sauvegardes, 50 € par mois</span></span></a></li><li><a class="mega-item" href="/depannage-site-wordpress-bourg-en-bresse"><span class="mega-thumb"><img src="assets/img/grok/service-depannage-760.webp" alt="" width="160" height="107" loading="lazy" decoding="async"></span><span class="mega-txt"><strong>Dépannage</strong><span>Page blanche, erreur, site piraté</span></span></a></li></ul>
+          <a class="mega-all" href="/#services">Voir tous les services sur l’accueil</a>
+        </div>
+      </div>
+      <a href="/#realisations">Réalisations</a><a href="/#tarifs">Tarifs</a><a href="#faq">FAQ</a>
       <a class="nav-phone" href="tel:+33771139991">07 71 13 99 91</a>
       <a class="btn" href="#contact" data-magnetic><span class="btn-label">Demander un devis</span></a>
     </nav>
@@ -63,9 +68,9 @@
   <div class="progress" aria-hidden="true"><i class="progress-fill"></i></div>
 </header>
 <div class="mobile-menu" id="menu-mobile" hidden>
-  <a href="/#services" data-close>Services</a><a href="/#realisations" data-close>Réalisations</a><a href="/#tarifs" data-close>Tarifs</a><a href="#faq" data-close>FAQ</a>
-  <a href="/creation-site-web-bourg-en-bresse" data-close>Création de site</a>
-  <a href="/maintenance-site-wordpress-bourg-en-bresse" data-close>Maintenance</a>
+  <a href="/" data-close>Accueil</a>
+  <div class="mm-group"><span class="mm-label">Services</span><ul><li><a href="/creation-site-web-bourg-en-bresse" data-close>Création de site</a></li><li><a href="/refonte-site-internet-bourg-en-bresse" data-close>Refonte de site</a></li><li><a href="/referencement-seo-bourg-en-bresse" data-close>Référencement SEO</a></li><li><a href="/maintenance-site-wordpress-bourg-en-bresse" data-close aria-current="page">Maintenance</a></li><li><a href="/depannage-site-wordpress-bourg-en-bresse" data-close>Dépannage</a></li></ul></div>
+  <a href="/#realisations" data-close>Réalisations</a><a href="/#tarifs" data-close>Tarifs</a><a href="#faq" data-close>FAQ</a>
   <div class="mm-foot">
     <span class="muted">Téléphone</span>
     <a href="tel:+33771139991" class="cote">07 71 13 99 91</a>
@@ -122,7 +127,7 @@
     <div class="sec-head sec-head--split"><div style="display:grid;gap:18px"><span class="eyebrow">Le forfait</span><h2 id="inclus-titre" data-split>Ce qui est inclus pour 50 € par mois.</h2></div><div class="price" style="justify-self:start"><b data-count="50">50</b><span class="unit">€</span><span class="per">par mois, TVA non applicable</span></div></div>
     <div class="inclus-grid">
       <article class="inclus-card inclus-card--main"><span class="muted">Inclus chaque mois</span><h3>Votre site entretenu, sans y penser</h3><ul class="features" data-checklist><li>Mises à jour de WordPress, du thème et des extensions</li><li>Sauvegardes régulières de votre site</li><li>Sécurité : failles corrigées au fil des mises à jour</li><li>Petites modifications : textes, images, tarifs, traitées sous 48 h</li><li>Intervention prioritaire en cas de bug ou de page blanche</li><li>Un interlocuteur à Bourg-en-Bresse, joignable directement, sans ticket</li></ul></article>
-      <article class="inclus-card inclus-card--more"><span class="muted">En plus, sur devis</span><h3>Les évolutions plus importantes</h3><ul class="features"><li><span>Nouvelles pages ou nouvelles sections</span></li><li><span>Nouvelles fonctions : réservation, paiement en ligne…</span></li><li><span>Grosses modifications du design</span></li><li><span>Travail de <a href="https://skapelys.fr/referencement-seo-bourg-en-bresse/">référencement</a> poussé</span></li></ul><p class="note">Le devis est gratuit, et vous savez toujours ce qui est compris dans le forfait avant que nous commencions.</p></article>
+      <article class="inclus-card inclus-card--more"><span class="muted">En plus, sur devis</span><h3>Les évolutions plus importantes</h3><ul class="features"><li><span>Nouvelles pages ou nouvelles sections</span></li><li><span>Nouvelles fonctions : réservation, paiement en ligne…</span></li><li><span>Grosses modifications du design</span></li><li><span>Travail de <a href="/referencement-seo-bourg-en-bresse">référencement</a> poussé</span></li></ul><p class="note">Le devis est gratuit, et vous savez toujours ce qui est compris dans le forfait avant que nous commencions.</p></article>
       <article class="inclus-card inclus-card--img" style="padding:0"><div class="media" data-parallax><img src="assets/img/grok/service-maintenance-1168.webp" alt="Mains réglant une roue de vélo sur un pied d’atelier" width="1168" height="784" decoding="async" loading="lazy" srcset="assets/img/grok/service-maintenance-760.webp 760w, assets/img/grok/service-maintenance-1168.webp 1168w" sizes="(max-width: 1080px) 92vw, 26vw"></div></article>
     </div>
     <div class="custom-quote"><p>La maintenance reste une option : vous pouvez aussi gérer votre site vous-même. Elle est faite pour ceux qui préfèrent déléguer les mises à jour et la sécurité.</p><a class="btn btn--ink" href="#contact" data-pick="maintenance"><span class="btn-label">Demander la maintenance</span></a></div>
@@ -132,10 +137,10 @@
   <div class="wrap">
     <div class="glitch-card">
       <div style="display:grid;gap:20px">
-        <h2 id="panne-titre" data-split>Votre site est déjà en panne ?</h2>
+        <h2 id="panne-titre" data-split>Votre site est déjà en <span class="nw">panne ?</span></h2>
         <p class="lead">Page blanche, erreur critique, site piraté ou devenu très lent : voyez le dépannage de site. Il a vieilli et ne vous ressemble plus ? Une refonte sera plus adaptée.</p>
-        <div class="btn-row"><a class="btn" href="https://skapelys.fr/depannage-site-wordpress-bourg-en-bresse/" target="_blank" rel="noopener"><span class="btn-label">Voir le dépannage</span></a><a class="btn btn--line" href="https://skapelys.fr/refonte-site-internet-bourg-en-bresse/" target="_blank" rel="noopener"><span class="btn-label">Voir la refonte</span></a></div>
-        <p class="note">Ces deux pages s’ouvrent sur le site actuel de Skapelys.</p>
+        <div class="btn-row"><a class="btn" href="/depannage-site-wordpress-bourg-en-bresse"><span class="btn-label">Voir le dépannage</span></a><a class="btn btn--line" href="/refonte-site-internet-bourg-en-bresse"><span class="btn-label">Voir la refonte</span></a></div>
+        
       </div>
       <div class="glitch-screen" data-glitch><svg viewBox="30 20 240 160" aria-hidden="true" data-anim="depannage"><rect x="30" y="20" width="240" height="160" rx="12" fill="#f4f6fa"/>
 <g class="gl-ok"><rect x="48" y="40" width="120" height="16" rx="5" fill="#0b1838"/><rect x="48" y="66" width="200" height="8" rx="4" fill="#a9b4cc"/><rect x="48" y="82" width="170" height="8" rx="4" fill="#a9b4cc"/><rect x="48" y="104" width="64" height="22" rx="11" fill="#ffd23f"/><rect x="48" y="140" width="96" height="24" rx="6" fill="#2a6bfa"/><rect x="154" y="140" width="96" height="24" rx="6" fill="#2a6bfa" opacity=".6"/></g>
@@ -192,7 +197,7 @@
       </div>
       <div class="faq-mascot" data-float><img src="assets/img/mascotte/mascotte-salut-200.webp" alt="La mascotte caméléon de Skapelys fait signe" width="201" height="258" decoding="async" loading="lazy"></div>
     </div>
-    <div class="faq-list"><details class="qa"><summary><span>Combien coûte la maintenance d’un site internet ?</span><span class="pm" aria-hidden="true"></span></summary><div class="answer"><p>Le forfait de maintenance est à 50 € par mois. Il comprend les mises à jour, les sauvegardes, la sécurité et les petites modifications. Les évolutions plus importantes sont chiffrées sur devis, gratuitement.</p></div></details><details class="qa"><summary><span>La maintenance est-elle obligatoire après la création du site ?</span><span class="pm" aria-hidden="true"></span></summary><div class="answer"><p>Non, elle est optionnelle. Vous repartez toujours avec votre site et une prise en main pour le gérer vous-même. Le forfait est fait pour ceux qui préfèrent déléguer les mises à jour et la sécurité.</p></div></details><details class="qa"><summary><span>Combien de modifications sont incluses dans le forfait ?</span><span class="pm" aria-hidden="true"></span></summary><div class="answer"><p>Les modifications de contenu courantes (textes, images, tarifs) sont incluses et traitées sous 48 h. Le détail exact est discuté ensemble lors du devis.</p></div></details><details class="qa"><summary><span>Que se passe-t-il si mon site est piraté ou tombe en panne ?</span><span class="pm" aria-hidden="true"></span></summary><div class="answer"><p>Les clients sous forfait maintenance bénéficient d’une intervention prioritaire, avec restauration depuis la dernière sauvegarde si nécessaire. Sans forfait, voyez notre <a href="https://skapelys.fr/depannage-site-wordpress-bourg-en-bresse/">dépannage de site</a>.</p></div></details><details class="qa"><summary><span>Prenez-vous en charge des sites que vous n’avez pas créés ?</span><span class="pm" aria-hidden="true"></span></summary><div class="answer"><p>Oui. Après un audit rapide pour vérifier l’état du site (thème, extensions, sécurité), nous pouvons reprendre la maintenance de sites existants, à Bourg-en-Bresse et dans l’Ain.</p></div></details><details class="qa"><summary><span>Mon site n’est pas sur WordPress : pouvez-vous l’entretenir ?</span><span class="pm" aria-hidden="true"></span></summary><div class="answer"><p>Nous travaillons principalement sur WordPress, mais nous intervenons aussi sur des sites réalisés avec d’autres outils. Nous regardons d’abord votre site pour vous dire précisément ce que nous pouvons prendre en charge.</p></div></details><details class="qa"><summary><span>Pourquoi mettre à jour mon site régulièrement ?</span><span class="pm" aria-hidden="true"></span></summary><div class="answer"><p>Les mises à jour corrigent des bugs et des failles de sécurité. Un site qui n’est plus mis à jour devient plus facile à pirater et peut cesser de fonctionner du jour au lendemain, par exemple après une mise à jour de l’hébergeur.</p></div></details><details class="qa"><summary><span>Travaillez-vous en dehors de Bourg-en-Bresse ?</span><span class="pm" aria-hidden="true"></span></summary><div class="answer"><p>Oui. Nous intervenons à Bourg-en-Bresse et dans tout l’Ain, à Viriat, Péronnas, Montagnat, Saint-Denis-lès-Bourg, Jasseron ou Saint-Just, et à distance avec des clients partout en France.</p></div></details>
+    <div class="faq-list"><details class="qa"><summary><span>Combien coûte la maintenance d’un site internet ?</span><span class="pm" aria-hidden="true"></span></summary><div class="answer"><p>Le forfait de maintenance est à 50 € par mois. Il comprend les mises à jour, les sauvegardes, la sécurité et les petites modifications. Les évolutions plus importantes sont chiffrées sur devis, gratuitement.</p></div></details><details class="qa"><summary><span>La maintenance est-elle obligatoire après la création du site ?</span><span class="pm" aria-hidden="true"></span></summary><div class="answer"><p>Non, elle est optionnelle. Vous repartez toujours avec votre site et une prise en main pour le gérer vous-même. Le forfait est fait pour ceux qui préfèrent déléguer les mises à jour et la sécurité.</p></div></details><details class="qa"><summary><span>Combien de modifications sont incluses dans le forfait ?</span><span class="pm" aria-hidden="true"></span></summary><div class="answer"><p>Les modifications de contenu courantes (textes, images, tarifs) sont incluses et traitées sous 48 h. Le détail exact est discuté ensemble lors du devis.</p></div></details><details class="qa"><summary><span>Que se passe-t-il si mon site est piraté ou tombe en panne ?</span><span class="pm" aria-hidden="true"></span></summary><div class="answer"><p>Les clients sous forfait maintenance bénéficient d’une intervention prioritaire, avec restauration depuis la dernière sauvegarde si nécessaire. Sans forfait, voyez notre <a href="/depannage-site-wordpress-bourg-en-bresse">dépannage de site</a>.</p></div></details><details class="qa"><summary><span>Prenez-vous en charge des sites que vous n’avez pas créés ?</span><span class="pm" aria-hidden="true"></span></summary><div class="answer"><p>Oui. Après un audit rapide pour vérifier l’état du site (thème, extensions, sécurité), nous pouvons reprendre la maintenance de sites existants, à Bourg-en-Bresse et dans l’Ain.</p></div></details><details class="qa"><summary><span>Mon site n’est pas sur WordPress : pouvez-vous l’entretenir ?</span><span class="pm" aria-hidden="true"></span></summary><div class="answer"><p>Nous travaillons principalement sur WordPress, mais nous intervenons aussi sur des sites réalisés avec d’autres outils. Nous regardons d’abord votre site pour vous dire précisément ce que nous pouvons prendre en charge.</p></div></details><details class="qa"><summary><span>Pourquoi mettre à jour mon site régulièrement ?</span><span class="pm" aria-hidden="true"></span></summary><div class="answer"><p>Les mises à jour corrigent des bugs et des failles de sécurité. Un site qui n’est plus mis à jour devient plus facile à pirater et peut cesser de fonctionner du jour au lendemain, par exemple après une mise à jour de l’hébergeur.</p></div></details><details class="qa"><summary><span>Travaillez-vous en dehors de Bourg-en-Bresse ?</span><span class="pm" aria-hidden="true"></span></summary><div class="answer"><p>Oui. Nous intervenons à Bourg-en-Bresse et dans tout l’Ain, à Viriat, Péronnas, Montagnat, Saint-Denis-lès-Bourg, Jasseron ou Saint-Just, et à distance avec des clients partout en France.</p></div></details>
       <div class="faq-cta"><p><strong>Une autre question ?</strong> Posez-la directement, réponse sous 24 h ouvrées.</p><div class="btn-row"><a class="btn btn--ink" href="#contact"><span class="btn-label">Poser ma question</span></a><span class="phone-inline"><span class="muted">ou appelez le</span><strong>07 71 13 99 91</strong></span></div></div>
     </div>
   </div>
@@ -218,7 +223,7 @@
         <span class="note">Calcul indicatif : jours ouvrés, hors week-ends et jours fériés.</span>
       </div>
       <div style="display:grid;gap:14px">
-        <h3>Et ensuite ?</h3>
+        <h3>Et <span class="nw">ensuite ?</span></h3>
         <ol class="next-steps">
           <li><span>Nous vous répondons sous <strong>24 heures ouvrées</strong>.</span></li>
           <li><span>Un premier échange <strong>gratuit, sans engagement</strong>.</span></li>
@@ -251,7 +256,7 @@
           <div class="field" data-req><label for="f-nom">Nom *</label><input id="f-nom" name="nom" type="text" required autocomplete="name"><span class="err" aria-live="polite"></span></div>
           <div class="field" data-req><label for="f-email">Email *</label><input id="f-email" name="email" type="email" required autocomplete="email" inputmode="email"><span class="err" aria-live="polite"></span></div>
           <div class="field"><label for="f-tel">Téléphone <span class="opt">(facultatif)</span></label><input id="f-tel" name="tel" type="tel" autocomplete="tel" inputmode="tel"></div>
-          <div class="field" data-req data-consent><label class="consent" for="f-consent"><input id="f-consent" name="consent" type="checkbox" required><span>J’accepte que mes informations soient utilisées pour me recontacter au sujet de ma demande. Voir la <a href="https://skapelys.fr/politique-de-confidentialite/" target="_blank" rel="noopener">politique de confidentialité</a>. *</span></label><span class="err" aria-live="polite"></span></div>
+          <div class="field" data-req data-consent><label class="consent" for="f-consent"><input id="f-consent" name="consent" type="checkbox" required><span>J’accepte que mes informations soient utilisées pour me recontacter au sujet de ma demande. Voir la <a href="/politique-de-confidentialite">politique de confidentialité</a>. *</span></label><span class="err" aria-live="polite"></span></div>
         </fieldset>
         <div class="form-nav">
           <button class="btn btn--line on-light" type="button" data-prev hidden><span class="btn-label">Retour</span></button>
@@ -283,10 +288,10 @@
         <h2 class="footer-h">Services</h2>
         <ul>
           <li><a href="/creation-site-web-bourg-en-bresse">Création de site</a></li>
-          <li><a href="https://skapelys.fr/refonte-site-internet-bourg-en-bresse/" class="ext">Refonte de site</a></li>
-          <li><a href="https://skapelys.fr/referencement-seo-bourg-en-bresse/" class="ext">Référencement SEO</a></li>
+          <li><a href="/refonte-site-internet-bourg-en-bresse">Refonte de site</a></li>
+          <li><a href="/referencement-seo-bourg-en-bresse">Référencement SEO</a></li>
           <li><a href="/maintenance-site-wordpress-bourg-en-bresse">Maintenance</a></li>
-          <li><a href="https://skapelys.fr/depannage-site-wordpress-bourg-en-bresse/" class="ext">Dépannage</a></li>
+          <li><a href="/depannage-site-wordpress-bourg-en-bresse">Dépannage</a></li>
         </ul>
       </div>
       <div>
@@ -301,8 +306,8 @@
       <div>
         <h2 class="footer-h">Informations</h2>
         <ul>
-          <li><a href="https://skapelys.fr/mentions-legales/" class="ext">Mentions légales</a></li>
-          <li><a href="https://skapelys.fr/politique-de-confidentialite/" class="ext">Politique de confidentialité</a></li>
+          <li><a href="/mentions-legales">Mentions légales</a></li>
+          <li><a href="/politique-de-confidentialite">Politique de confidentialité</a></li>
         </ul>
       </div>
     </div>
